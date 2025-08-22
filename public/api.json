@@ -384,6 +384,7 @@
           }
         }
       },
+
       {
         "id": 916,
         "type": "ns_base_container",
@@ -827,7 +828,7 @@
             "offset_column_xxl_4": ""
           }
         }
-      },
+      },     
       {
         "id": 2642,
         "type": "ns_base_4Cols",

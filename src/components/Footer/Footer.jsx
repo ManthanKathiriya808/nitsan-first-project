@@ -31,11 +31,7 @@ const Footer = () => {
             <FaLinkedinIn className="font-light me-4 text-lg" />
 
         </a>
-        <button type="button" class="text-white flex items-center gap-3 bg-gradient-to-br from-[var(--primaryClr)] to-[var(--teritoryClr)] hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium  text-lg px-10 py-3.5 text-lg text-center ">Build Your Style<svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-</svg>
-
-</button>
+ 
 
         </div>
       </div>
