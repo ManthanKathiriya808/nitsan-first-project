@@ -9,6 +9,6 @@ export default function createQueryOptions(){
 }
 
 const fetchApi = async ()=> {
-  const resp = await fetch(`https://demo.t3planet.com/t3-reva/`)
+  const resp = await fetch(`https://t3-reva.t3planet.com/`)
   return await resp.json()
 }

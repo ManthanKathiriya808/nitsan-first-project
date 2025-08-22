@@ -1,12 +1,15 @@
 import React from 'react'
 import Layout from '../components/Layout/Layout'
-import Forms from '../components/Forms'
+import HeroSection from '../components/HomePage/HeroSection'
+import SmoothFollower from '../components/SmoothFollower/SmoothFollower'
+
 
 const Home = () => {
   return (
     <Layout>
-        <div>Home</div>
-       <Forms/>
+      <SmoothFollower/>
+        <HeroSection/>
+       
     </Layout>
   )
 }

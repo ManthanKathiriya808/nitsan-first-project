@@ -8,7 +8,7 @@ const Navbar = () => {
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState({});
   
   const {data: navData} = useQuery(createQueryOptions())
-  console.log(navData?.page?.mainNavigation)
+
 
   const toggleMobileDropdown = (index, childIndex = null) => {
     const key = childIndex !== null ? `${index}-${childIndex}` : index.toString();
@@ -23,9 +23,9 @@ const Navbar = () => {
   };
 
   return (
-    <div>
-      <nav className="bg-white shadow-md border-b border-gray-200 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className='fixed top-0 right-0 left-0'>
+      <nav className="bg-white  position-fixed shadow-md border-b border-gray-200 sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-6 py-2 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             
             {/* Logo */}
@@ -67,7 +67,7 @@ const Navbar = () => {
                 <li key={nestedIndex}>
                   <a
                     href={nestedChild.link}
-                    className="block text-gray-600 hover:text-blue-600 hover:pl-1 transition-all duration-200 text-sm"
+                    className="block text-[var(--textClr)] hover:text-blue-600 hover:pl-1 transition-all duration-200 text-sm"
                   >
                     {nestedChild.title}
                   </a>
@@ -91,7 +91,7 @@ const Navbar = () => {
                         <div key={childIndex} className="relative group/child">
                           <a
                             href={child.link}
-                            className="flex items-center justify-between px-4 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-200 rounded-md text-sm mx-2"
+                            className="flex items-center justify-between px-4 py-2 text-[var(--textClr)] hover:text-blue-600 hover:bg-blue-50 transition-colors duration-200 rounded-md text-sm mx-2"
                           >
                             <span>{child.title}</span>
                             {child.children && child.children.length > 0 && (
@@ -105,7 +105,7 @@ const Navbar = () => {
                                 <a
                                   key={nestedIndex}
                                   href={nestedChild.link}
-                                  className="block px-4 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-200 rounded-md text-sm mx-2"
+                                  className="block px-4 py-2 text-[var(--textClr)] hover:text-blue-600 hover:bg-blue-50 transition-colors duration-200 rounded-md text-sm mx-2"
                                 >
                                   {nestedChild.title}
                                 </a>
@@ -137,15 +137,15 @@ const Navbar = () => {
                   <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
                 </button>
                 <div className="absolute top-full right-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 py-2">
-                  <button className="flex items-center w-full px-4 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-200 text-sm">
+                  <button className="flex items-center w-full px-4 py-2 text-[var(--textClr)] hover:text-blue-600 hover:bg-blue-50 transition-colors duration-200 text-sm">
                     <span className="mr-3">🇺🇸</span>
                     English
                   </button>
-                  <button className="flex items-center w-full px-4 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-200 text-sm">
+                  <button className="flex items-center w-full px-4 py-2 text-[var(--textClr)] hover:text-blue-600 hover:bg-blue-50 transition-colors duration-200 text-sm">
                     <span className="mr-3">🇪🇸</span>
                     Spanish
                   </button>
-                  <button className="flex items-center w-full px-4 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-200 text-sm">
+                  <button className="flex items-center w-full px-4 py-2 text-[var(--textClr)] hover:text-blue-600 hover:bg-blue-50 transition-colors duration-200 text-sm">
                     <span className="mr-3">🇫🇷</span>
                     French
                   </button>

@@ -1,0 +1,16 @@
+:root{
+  --primaryClr: #4c6fff;
+  --secondryClr: #61dcdf;
+  --textClr: #617798;
+  --teritoryClr: #f43fe2;
+  --grayClr:#cdcbcb;
+  --fontFamily: roboto, sans-serif;
+}
+
+
+body{
+  color:var(--textClr);
+  font-family: var(--fontFamily);
+  transition: all 0.3s ease-in-out;
+
+}
