@@ -2273,11 +2273,6 @@
           }
         }
       },
-
-
-
-
-
       {
         "id": 753,
         "type": "ns_bayse_container",
@@ -2373,11 +2368,7 @@
             "background_option": "light"
           }
         }
-      },
-
-
-
-
+      },  
 
 
 
@@ -2610,6 +2601,15 @@
           }
         }
       },
+
+
+
+
+
+
+
+
+
       {
         "id": 795,
         "type": "ns_base_container",

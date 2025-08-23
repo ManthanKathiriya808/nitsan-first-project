@@ -8,6 +8,7 @@ import PreBuildWebsite from '../components/HomePage/Pre-Build-website/PreBuildWe
 import CardSection from '../components/HomePage/cardSection/CardSection'
 import CounterSection from '../components/HomePage/counterSection/CounterSection'
 import OneClickSection from '../components/HomePage/oneClick/OneClickSection'
+import TabsComponents from '../components/TabsComponents/TabsComponents'
 
 
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
         <CardSection/>
         <CounterSection/>
         <OneClickSection/>
+        <TabsComponents/>
     </Layout>
   )
 }
