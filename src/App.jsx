@@ -8,7 +8,7 @@ import Home from './Pages/Home'
 function App() {
  
   const {data,isPending,isError,error} = useQuery(createQueryOptions())
- console.log(data?.page?.mainNavigation)
+//  console.log(data?.page?.mainNavigation)
    
 
   return (

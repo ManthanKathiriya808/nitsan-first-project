@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="class flex flex-col gap-6 lg:gap-0 lg:flex-row justify-between">
         <div className="links flex flex-col lg:flex-row  gap-3">
           { data?.page?.footerNavigation.map((ele,index)=>(
-            <div className="footerLinks">
+            <div className="footerLinks" key={index}>
               <a href={ele.link} className="font-light me-4 text-md">{ele.title}</a>
             </div>
           ))}

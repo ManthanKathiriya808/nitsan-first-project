@@ -384,7 +384,6 @@
           }
         }
       },
-
       {
         "id": 916,
         "type": "ns_base_container",
@@ -828,7 +827,7 @@
             "offset_column_xxl_4": ""
           }
         }
-      },     
+      },       
       {
         "id": 2642,
         "type": "ns_base_4Cols",
@@ -1986,6 +1985,9 @@
                               "bodytext": "\u003Ch2 class=\"text-justify\"\u003E\u003Cspan class=\"h1\"\u003EOver \u003C/span\u003E\u003Cspan class=\"h1 gradient-color\"\u003E39+ Elements \u003C/span\u003E\u003Cspan class=\"h1\"\u003EBuild your pages just as\u003C/span\u003E&nbsp;&nbsp; \u003Cspan class=\"h1\"\u003Eyou imagine them.\u003C/span\u003E\u003C/h2\u003E\n\u003Cp class=\"text-justify\"\u003E\u003Cbr\u003EEach shortcode comes with it's own settings tab where you can easily customize the content and design.\u003C/p\u003E"
                             }
                           },
+
+
+
                           {
                             "id": 775,
                             "type": "ns_base_2Cols",
@@ -2271,9 +2273,14 @@
           }
         }
       },
+
+
+
+
+
       {
         "id": 753,
-        "type": "ns_base_container",
+        "type": "ns_bayse_container",
         "colPos": 0,
         "categories": "",
         "appearance": {
@@ -2367,6 +2374,15 @@
           }
         }
       },
+
+
+
+
+
+
+
+
+      
       {
         "id": 914,
         "type": "ns_base_container",
