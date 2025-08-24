@@ -12,10 +12,11 @@ const TabsComponents = () => {
      const base1 = data?.content?.colPos0[8]?.content?.items[0]
 const header = base1?.contentElements[0]?.content?.bodytext
 const tabs = base1?.contentElements[1]?.content?.contentTabBlock
-console.log(tabs)
+
   return (
       <div className="div bg-[var(--grayClr)]/30 my-10 py-10">
-        <div className="title my-5 py-5 text-center">
+      <div className=' max-w-7xl mx-auto'>
+          <div className="title my-5 py-5 text-center">
             <div className="heading flex justify-center flex-col text-center">
                     <h1 className='leading-8'>
                       <GradientText className="" text= {stripHtml(header).replace(/&nbsp;/g  ," ").split("We bring")[0]} />
@@ -27,11 +28,12 @@ console.log(tabs)
           
         </div>
         <div className='my-5 py-5'>
-          <UnderLineTabs/>
+          <UnderLineTabs tabs={tabs}/>
 
 
 
         </div>
+      </div>
     </div>
   )
 }

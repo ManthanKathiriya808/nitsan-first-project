@@ -12,7 +12,6 @@ const header = base1?.contentElements[0]?.content?.bodytext
 const content = base1?.contentElements[1]?.content?.processBlock
 
 
-console.log(content)
   return (
     <div className="div my-10 py-10">
         <div className="title my-5 py-5 text-center">

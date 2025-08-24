@@ -9,6 +9,9 @@ import CardSection from '../components/HomePage/cardSection/CardSection'
 import CounterSection from '../components/HomePage/counterSection/CounterSection'
 import OneClickSection from '../components/HomePage/oneClick/OneClickSection'
 import TabsComponents from '../components/TabsComponents/TabsComponents'
+import EasyIntrectionCard from '../components/HomePage/EasyIntercationCard/EasyIntrectionCard'
+import FluidAndResponsive from '../components/HomePage/FluidAndResponsive/FluidAndResponsive'
+import PreMadeLayout from '../components/HomePage/PreMadeLayout/PreMadeLayout'
 
 
 const Home = () => {
@@ -21,6 +24,9 @@ const Home = () => {
         <CounterSection/>
         <OneClickSection/>
         <TabsComponents/>
+        <EasyIntrectionCard/>
+        <FluidAndResponsive/>
+        <PreMadeLayout/>
     </Layout>
   )
 }

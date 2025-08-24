@@ -2369,11 +2369,6 @@
           }
         }
       },  
-
-
-
-
-      
       {
         "id": 914,
         "type": "ns_base_container",
@@ -2601,15 +2596,6 @@
           }
         }
       },
-
-
-
-
-
-
-
-
-
       {
         "id": 795,
         "type": "ns_base_container",
@@ -2653,7 +2639,7 @@
                     "headerLink": "",
                     "bodytext": "\u003Ch2 class=\"text-center\"\u003E\u003Cspan class=\"h1\"\u003EEasy Integration with Below \u003C/span\u003E\u003Cspan class=\"h1 gradient-color\"\u003EProducts\u003C/span\u003E\u003C/h2\u003E\n\u003Cp class=\"text-center\"\u003EThis template comes super easy when integrating with&nbsp;\u003Cbr\u003Eother popular TYPO3 Products.\u003C/p\u003E"
                   }
-                },
+                },  
                 {
                   "id": 798,
                   "type": "ns_base_3Cols",
@@ -3427,6 +3413,20 @@
           }
         }
       },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       {
         "id": 873,
         "type": "ns_base_container",
@@ -3750,6 +3750,20 @@
           }
         }
       },
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
       {
         "id": 882,
         "type": "ns_base_container",
