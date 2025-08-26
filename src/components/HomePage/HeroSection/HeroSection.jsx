@@ -48,7 +48,7 @@ const rortatingText = ["modern","stunning","timeless","unique"]
 /> */}
 
 
-  <a href="https://coding-space.vercel.app/" target="_blank" class="bg-gradient-to-r from-rose-400 via-fuchsia-500 to-[var(--primaryClr)] bg-[length:100%_18px]  bg-no-repeat bg-bottom"><h1 className='text-7xl  tracking-normal  font-bold'>
+  <a href="https://coding-space.vercel.app/" target="_blank" class="bg-gradient-to-r from-[var(--primaryClr)]  bg-[length:100%_18px]  bg-no-repeat bg-bottom"><h1 className='text-7xl  tracking-normal  font-bold'>
     {HeroSectionContentmiddleText && stripHtml(HeroSectionContentmiddleText?.bodytext).substring(0,14)}
 </h1></a>
 

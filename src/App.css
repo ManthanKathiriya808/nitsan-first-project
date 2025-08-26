@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root{
   --primaryClr: #4c6fff;
   --secondryClr: #61dcdf;
   --textClr: #617798;
   --teritoryClr: #f43fe2;
   --grayClr:#cdcbcb;
-  --fontFamily: robot, sans-serif;
+  --fontFamily: "Work Sans", sans-serif;
+  --wideWidth:100%;
 }
 
 
@@ -12,5 +17,43 @@ body{
   color:var(--textClr);
   font-family: var(--fontFamily);
   transition: all 0.3s ease-in-out;
+  margin: auto;
+  max-width: var(--wideWidth);
+}
 
+body.boxed {
+  background: var(--textClr); 
+}
+
+.formdata h5{
+    color: #f8f8f8;
+    font-weight: 400;
+    opacity: .7;
+    line-height: 21px;
+    margin: 0 0 5px ;
+    padding: 0;
+    text-transform: none;
+}
+
+.input-group-text {
+ 
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    
+ 
+}
+
+.style-switchers button {
+ 
+    border-radius: 4px;
+  
+    display: inline-block;
+    line-height: normal;
+    margin-bottom: 0;
+    margin-right: 8px;
+    padding: 5px 12px;
+    text-decoration: none;
+    transition: all, .2s, ease, 0s;
 }

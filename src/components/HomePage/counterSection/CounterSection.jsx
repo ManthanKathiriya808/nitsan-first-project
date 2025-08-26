@@ -18,7 +18,7 @@ const CounterSection = () => {
 
 
   return (
-    <div className=' px-3 py-5 md:px-4 my-5 min-h-screen flex items-center justify-center  bg-[var(--grayClr)]/30'>
+    <div className=' px-3 py-5 md:px-4 my-5 min-h-screen  flex items-center justify-center  bg-[var(--grayClr)]/30'>
         <div className=' py-6 grid grid-cols-1 lg:ms-5 lg:ps-10 lg:grid-cols-2 gap-10 lg:gap-4   h-full'>
               <div className="contents  justify-center  flex flex-col ">
                 <div className="heading ">
@@ -29,7 +29,7 @@ const CounterSection = () => {
                         {stripHtml(header).replace(/&nbsp;/g  ," ").split("imagine them.")[1]}
                     </p>
                 </div>
-             <div className=' flex  flex-col md:flex-row justify-evenly gap-3'>
+             <div className=' flex  flex-col overflow-hidden md:flex-row text-start md:justify-evenly gap-3'>
        {
                         counte1?.items?.map((item)=>(
                        
@@ -39,7 +39,7 @@ const CounterSection = () => {
                             <div >
 
                         <div className="div1 ">
-                         <h1 className='text-6xl mb-5 font-bold text-[var(--secondryClr)] flex  justify-center gap-1'>
+                         <h1 className='text-6xl mb-5  font-bold text-[var(--secondryClr)] flex  justify-center gap-1'>
                               { ele?.content?.counterData ?
                                 <CountUp to= {Number(ele?.content?.counterData)}/> : ""
                               }
@@ -48,10 +48,10 @@ const CounterSection = () => {
 
                          </h1>
 
-                            <h1 className='text-2xl leading-8  mb-2 font-bolder '>
+                            <h1 className='text-2xl  leading-8  mb-2 font-bolder '>
                                 {ele.content?.header}
                             </h1>
-                            <p className='text-lg leading-7 font-light '>{stripHtml(ele.content?.bodytext).replace(/&nbsp;/g  ," ")}</p>
+                            <p className='md:text-lg text-md overflow-hidden leading-7 font-light '>{stripHtml(ele.content?.bodytext).replace(/&nbsp;/g  ," ")}</p>
                         </div>
 
                             </div>
