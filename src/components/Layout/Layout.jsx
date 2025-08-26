@@ -9,10 +9,10 @@ const Layout = ({children}) => {
   const {darkmode} = useContext(ThemeContext)
   return (
    <>
-    <div className={`relative ${darkmode === "light"}? "bg-white" : " "`}>
+    <div className={`z-1 relative ${darkmode === "light"}? "bg-white" : " "`}>
         <Navbar/>
         <SideMenu />
-    <div className='content'>
+    <div className='content z-1'>
         {children}
         
     </div>

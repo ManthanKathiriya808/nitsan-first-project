@@ -17,7 +17,7 @@ const ThemeContextProvider = ({children}) => {
 
 
   const [darkMode,setDarkMode] = useState("light")
-
+  const [stripe,setStripe] = useState(false)
   const changeTheme = (key,value)=>{
     setTheme((prev)=>({...prev, [key] : value}))
 
@@ -39,11 +39,18 @@ useEffect(()=>{
         }else{
            document.body.classList.remove("changeThemes") 
         }
+
+        if(stripe){
+          document.body.classList.add("stripe-bg")
+        }else{
+          document.body.classList.remove("stripe-bg")
+
+        }
     
-},[darkMode])
+},[darkMode,stripe])
   return (
     
-    <ThemeContext.Provider value={{changeTheme,theme,darkMode,setDarkMode}}>
+    <ThemeContext.Provider value={{changeTheme,theme,darkMode,setDarkMode,stripe,setStripe}}>
         {children}
     </ThemeContext.Provider>
   )

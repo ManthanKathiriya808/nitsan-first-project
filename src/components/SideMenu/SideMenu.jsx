@@ -5,8 +5,8 @@ import { ThemeContext } from '../../ThemeContext/ThemeContextProvider'
 const SideMenu = () => {
 
     const [toggle,setToggle] = useState(false)
-    const {changeTheme,theme,darkMode,setDarkMode} = useContext(ThemeContext)
-    console.log(darkMode)
+    const {changeTheme,theme,darkMode,setDarkMode,stripe,setStripe} = useContext(ThemeContext)
+    
   
 
         const handleForm = (e)=>{
@@ -31,14 +31,16 @@ const SideMenu = () => {
             {toggle && (
                 <div className="div  bg-[#002348] ">
                     <form onSubmit={handleForm} action="">
-                        <div className="mainfom overflow-y-scroll max-h-screen" style={{padding:"16px 30px 10px"}}>
+                        <div className="mainfom overflow-y-scroll max-h-screen" >
+                            <div style={{padding:"16px 30px 10px"}}>
+
                             <div className="heading text-white font-medium text-[0.98em] mb-2" >
                                 <h4>Theme Color</h4>
                             </div>
                             <div className="formdata  text-[0.83em]">
                                 <div className="singleData mb-3">
                                        <h5 className='mb-2'>Primary Color</h5>
-                                <div className="color divide-x-1 divide-line divide-gray-200  flex border bg-white border-none items-center input-group-text  h-[38px]  rounded-sm">
+                                <div className="color divide-x-1 divide-line divide-gray-200  flex border bg-white border-none items-center input-group-text    rounded-sm">
                                   <div className=''>
                                       <input type="color" value={theme.primaryClr} onChange={(e)=> changeTheme("primaryClr",e.target.value)} className=' w-[20px] h-[23px] me-2 rounded-md   ' name="" id=""  /> 
                                   </div>
@@ -47,7 +49,7 @@ const SideMenu = () => {
                                 </div>
                                 <div className="singleData mb-3">
                                        <h5 className='mb-2'>Secondary Color</h5>
-                                <div className="color divide-x-1 divide-line divide-gray-200  flex border bg-white border-none items-center input-group-text  h-[38px]  rounded-sm">
+                                <div className="color divide-x-1 divide-line divide-gray-200  flex border bg-white border-none items-center input-group-text    rounded-sm">
                                   <div className=''>
                                       <input type="color" value={theme.secondryClr} onChange={(e)=> changeTheme("secondryClr",e.target.value)} className=' w-[20px] h-[23px] me-2 rounded-md   ' name="" id=""  /> 
                                   </div>
@@ -56,7 +58,7 @@ const SideMenu = () => {
                                 </div>
                                 <div className="singleData mb-3">
                                        <h5 className='mb-2'>Text Color</h5>
-                                <div className="color divide-x-1 divide-line divide-gray-200  flex border bg-white border-none items-center input-group-text  h-[38px]  rounded-sm">
+                                <div className="color divide-x-1 divide-line divide-gray-200  flex border bg-white border-none items-center input-group-text    rounded-sm">
                                   <div className=''>
                                       <input type="color" value={theme.textClr} onChange={(e)=> changeTheme("textClr",e.target.value)} className=' w-[20px] h-[23px] me-2 rounded-md   ' name="" id=""  /> 
                                   </div>
@@ -65,7 +67,7 @@ const SideMenu = () => {
                                 </div>
                                 <div className="singleData mb-3">
                                        <h5 className='mb-2'>Teritory Color</h5>
-                                <div className="color divide-x-1 divide-line divide-gray-200  flex border bg-white border-none items-center input-group-text  h-[38px]  rounded-sm">
+                                <div className="color divide-x-1 divide-line divide-gray-200  flex border bg-white border-none items-center input-group-text    rounded-sm">
                                   <div className=''>
                                       <input type="color" value={theme.teritoryClr} onChange={(e)=> changeTheme("teritoryClr",e.target.value)} className=' w-[20px] h-[23px] me-2 rounded-md   ' name="" id=""  /> 
                                   </div>
@@ -74,7 +76,7 @@ const SideMenu = () => {
                                 </div>
                                 <div className="singleData mb-3">
                                        <h5 className='mb-2'>Gray Color</h5>
-                                <div className="color divide-x-1 divide-line divide-gray-200  flex border bg-white border-none items-center input-group-text  h-[38px]  rounded-sm">
+                                <div className="color divide-x-1 divide-line divide-gray-200  flex border bg-white border-none items-center input-group-text    rounded-sm">
                                   <div className=''>
                                       <input type="color" value={theme.grayClr} onChange={(e)=> changeTheme("grayClr",e.target.value)} className=' w-[20px] h-[23px] me-2 rounded-md   ' name="" id=""  /> 
                                   </div>
@@ -83,7 +85,7 @@ const SideMenu = () => {
                                 </div>
                                 <div className="singleData mb-3">
                                        <h5 className='mb-2'>Header Menu</h5>
-                                <div className="     bg-white border-none    h-[38px] flex  rounded-sm">
+                                <div className="     bg-white border-none     flex  rounded-sm">
                                 
                                     <select name="" className=' text-[1 em] traking-wide  font-normal text-gray-600 bg-white flex-grow rounded-lg border-none' id="">
                                         <option value="">
@@ -103,7 +105,7 @@ const SideMenu = () => {
                                 </div>
                                 <div className="singleData mb-3">
                                        <h5 className='mb-2'>Footer Menu</h5>
-                                <div className="     bg-white border-none    h-[38px] flex  rounded-sm">
+                                <div className="     bg-white border-none     flex  rounded-sm">
                                 
                                     <select name="" className=' text-[1em] tracking-wide  font-normal text-gray-600 bg-white flex-grow rounded-lg border-none' id="">
                                         <option value="">
@@ -123,7 +125,7 @@ const SideMenu = () => {
                                 </div>
                                 <div className="singleData mb-3">
                                        <h5 className='mb-2'>Main Font Family</h5>
-                                <div className="     bg-white border-none    h-[38px] flex  rounded-sm">
+                                <div className="     bg-white border-none     flex  rounded-sm">
                                 
                                     <select name="" className=' text-[1em] traking-wide  font-normal text-gray-600 bg-white flex-grow rounded-lg border-none' onChange={(e)=> changeTheme("fontFamily",e.target.value)} value={theme.fontFamily} id="">
                                         <option value="Work Sans">
@@ -143,7 +145,7 @@ const SideMenu = () => {
                                 </div>
                                 <div className="singleData mb-3">
                                        <h5 className='mb-2'>Layouts Switcher</h5>
-                                <div className="      border-none    h-[38px] flex style-switchers  rounded-sm">
+                                <div className="      border-none     flex style-switchers  rounded-sm">
                                 
                                <button value={"100%"} onClick={(e)=>changeTheme("wideWidth",e.target.value)}  className={`p-2 rounded 
             ${theme.wideWidth === "100%" ? "bg-white text-black" : "bg-black text-white"}`}
@@ -161,7 +163,7 @@ const SideMenu = () => {
                                 </div>
                                 <div className="singleData mb-3">
                                        <h5 className='mb-2'>Background Color</h5>
-                                <div className="border-none h-[38px] flex style-switchers  rounded-sm">
+                                <div className="border-none  flex style-switchers  rounded-sm">
                                 
                                <button  value={"light"} onClick={()=> setDarkMode("light")} className={`p-2 rounded 
             ${darkMode === "light" ? "bg-white text-black" : "bg-black text-white"}`}
@@ -181,7 +183,72 @@ const SideMenu = () => {
 
 
 
+                                <div className="singleData mb-3">
+                                       <h5 className='mb-2'> Search Type</h5>
+                                <div className="border-none  flex style-switchers  rounded-sm">
+                                
+                               <button  value={"light"} onClick={()=> setDarkMode("light")} className={`p-2 rounded 
+            ${darkMode === "light" ? "bg-white text-black" : "bg-black text-white"}`}
+        >
+                                Show
+                               </button>
+                               <button value={"dark"} onClick={()=> setDarkMode("dark")}  className={`p-2 rounded 
+            ${darkMode === "dark" ? "bg-white text-black" : "bg-black text-white"}`}
+        >
+                                Hide
+                               </button>
+                                  
+                               
+                                </div>
+                                </div>
+                                <div className="singleData mb-3">
+                                       <h5 className='mb-2'> Language Type</h5>
+                                <div className="border-none  flex style-switchers  rounded-sm">
+                                
+                               <button  value={"light"} onClick={()=> setDarkMode("light")} className={`p-2 rounded 
+            ${darkMode === "light" ? "bg-white text-black" : "bg-black text-white"}`}
+        >
+                                Show
+                               </button>
+                               <button value={"dark"} onClick={()=> setDarkMode("dark")}  className={`p-2 rounded 
+            ${darkMode === "dark" ? "bg-white text-black" : "bg-black text-white"}`}
+        >
+                                Hide
+                               </button>
+                                  
+                               
+                                </div>
+                                </div>
+                                <div className="singleData mb-3">
+                                       <h5 className='mb-2'>Page Stripe</h5>
+                                <div className="border-none  flex style-switchers  rounded-sm">
+                                
+                               <button  value={stripe} onClick={()=> setStripe(true)} className={`p-2 rounded 
+            ${stripe ? "bg-white text-black" : "bg-black text-white"}`}
+        >
+                                Show
+                               </button>
+                               <button value={stripe} onClick={()=> setStripe(false)}  className={`p-2 rounded 
+            ${!stripe ? "bg-white text-black" : "bg-black text-white"}`}
+        >
+                                Hide
+                               </button>
+                                  
+                               
+                                </div>
+                                </div>
+
+
+
+
             
+                            </div>
+                            </div>
+
+                            <div className='text-sm flex  justify-center items-center gap-3 mb-5 border-t border-white text-white' style={{padding:"18px 30px 15px"}}>
+                                
+                                    <button type='submit' className='px-3 border rounded py-1 bg-[var(--primaryClr)]'>Submit</button>
+                                    <button type='reset' className='px-3 border rounded py-1 bg-[var(--primaryClr)]'>Reset</button>
                             </div>
                         </div>
                     </form>

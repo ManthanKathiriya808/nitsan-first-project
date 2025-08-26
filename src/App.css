@@ -57,7 +57,24 @@ body.changeThemes {
     line-height: normal;
     margin-bottom: 0;
     margin-right: 8px;
-    padding: 5px 12px;
+    padding: 6px 15px;
     text-decoration: none;
     transition: all, .2s, ease, 0s;
+}
+
+.stripe-bg {
+  background: linear-gradient(
+    to right,
+    transparent 30%,
+    rgb(205, 205, 205) 30%,
+    rgb(205, 205, 205) calc(1px ),
+   
+    transparent calc(30% + 1px),
+
+    transparent 70%,
+      rgb(205, 205, 205) 30%,
+    rgb(205, 205, 205) calc(1px ),
+    transparent calc(70% + 1px)
+  );
+  z-index: -5 !important;
 }
