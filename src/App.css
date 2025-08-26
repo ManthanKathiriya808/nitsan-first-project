@@ -24,6 +24,10 @@ body{
 body.boxed {
   background: var(--textClr); 
 }
+body.changeThemes {
+  background: var(--secondryClr); 
+ 
+}
 
 .formdata h5{
     color: #f8f8f8;

@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 
 
 export const ThemeContext = createContext()
@@ -15,6 +15,9 @@ const ThemeContextProvider = ({children}) => {
   wideWidth:"100%"
   })
 
+
+  const [darkMode,setDarkMode] = useState("light")
+
   const changeTheme = (key,value)=>{
     setTheme((prev)=>({...prev, [key] : value}))
 
@@ -29,9 +32,18 @@ const ThemeContextProvider = ({children}) => {
     }
   }
 
+useEffect(()=>{
+     
+        if(darkMode == "dark"){
+            document.body.classList.add("changeThemes")
+        }else{
+           document.body.classList.remove("changeThemes") 
+        }
+    
+},[darkMode])
   return (
     
-    <ThemeContext.Provider value={{changeTheme,theme}}>
+    <ThemeContext.Provider value={{changeTheme,theme,darkMode,setDarkMode}}>
         {children}
     </ThemeContext.Provider>
   )

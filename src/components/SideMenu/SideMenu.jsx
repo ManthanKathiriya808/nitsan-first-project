@@ -5,9 +5,9 @@ import { ThemeContext } from '../../ThemeContext/ThemeContextProvider'
 const SideMenu = () => {
 
     const [toggle,setToggle] = useState(false)
-    const {changeTheme,theme} = useContext(ThemeContext)
-    const {customFont,setCustomFont} = useState(false)
-    console.log(theme.wideWidth)
+    const {changeTheme,theme,darkMode,setDarkMode} = useContext(ThemeContext)
+    console.log(darkMode)
+  
 
         const handleForm = (e)=>{
             e.preventDefault()
@@ -154,6 +154,24 @@ const SideMenu = () => {
             ${theme.wideWidth === "1200px" ? "bg-white text-black" : "bg-black text-white"}`}
         >
                                 Boxed
+                               </button>
+                                  
+                               
+                                </div>
+                                </div>
+                                <div className="singleData mb-3">
+                                       <h5 className='mb-2'>Background Color</h5>
+                                <div className="border-none h-[38px] flex style-switchers  rounded-sm">
+                                
+                               <button  value={"light"} onClick={()=> setDarkMode("light")} className={`p-2 rounded 
+            ${darkMode === "light" ? "bg-white text-black" : "bg-black text-white"}`}
+        >
+                                Light
+                               </button>
+                               <button value={"dark"} onClick={()=> setDarkMode("dark")}  className={`p-2 rounded 
+            ${darkMode === "dark" ? "bg-white text-black" : "bg-black text-white"}`}
+        >
+                                Dark
                                </button>
                                   
                                
