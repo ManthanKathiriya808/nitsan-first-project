@@ -3,9 +3,8 @@ import React, { createContext, useEffect, useState } from 'react'
 
 export const ThemeContext = createContext()
 
-const ThemeContextProvider = ({children}) => {
-
-  const [theme,setTheme] = useState({
+const defaultTheme = {
+  
       primaryClr: "#4c6fff",
   secondryClr: "#61dcdf",
   textClr: "#617798",
@@ -13,44 +12,73 @@ const ThemeContextProvider = ({children}) => {
   grayClr:"#cdcbcb",
   fontFamily: "Work Sans, sans-serif",
   wideWidth:"100%"
-  })
+  
+}
+
+const ThemeContextProvider = ({children}) => {
+
+  const savedData = JSON.parse(localStorage.getItem("customTheme")) || {};
+
+  const [theme,setTheme] = useState({ ...defaultTheme, ...savedData.theme })
 
 
-  const [darkMode,setDarkMode] = useState("light")
-  const [stripe,setStripe] = useState(false)
+  const [darkMode,setDarkMode] = useState(savedData.darkMode || "light")
+  const [stripe,setStripe] = useState(savedData.darkMode || false)
+  const [showSearch,setShowSearch] = useState(savedData.showSearch || true)
+  const [showLang,setShowLang] = useState(savedData.showLang || true)
+
   const changeTheme = (key,value)=>{
     setTheme((prev)=>({...prev, [key] : value}))
 
-    document.documentElement.style.setProperty(`--${key}`,value)
-
-    if(key==="wideWidth"){
-      if(value === "1200px"){
-        document.body.classList.add("boxed")
-      }else{
-        document.body.classList.remove("boxed")
-      }
-    }
+ 
   }
+
+   useEffect(() => {
+    Object.keys(theme).forEach((key) => {
+      document.documentElement.style.setProperty(`--${key}`, theme[key]);
+    });
+
+    if (theme.wideWidth === "1200px") {
+      document.body.classList.add("boxed");
+    } else {
+      document.body.classList.remove("boxed");
+    }
+  }, [theme]);
 
 useEffect(()=>{
      
         if(darkMode == "dark"){
-            document.body.classList.add("changeThemes")
+           
+          document.body.classList.add("changeThemes")
         }else{
+       
            document.body.classList.remove("changeThemes") 
         }
 
         if(stripe){
+     
           document.body.classList.add("stripe-bg")
         }else{
           document.body.classList.remove("stripe-bg")
-
+      
         }
     
 },[darkMode,stripe])
+
+
+const saveSettings = () =>{
+  localStorage.setItem("customTheme",  JSON.stringify({ theme, darkMode, stripe ,showLang,showSearch}))
+}
+
+  const resetSettings = () => {
+    setTheme(defaultTheme);
+    setDarkMode("light");
+    setStripe(false);
+    localStorage.removeItem("customTheme");
+  };
   return (
     
-    <ThemeContext.Provider value={{changeTheme,theme,darkMode,setDarkMode,stripe,setStripe}}>
+    <ThemeContext.Provider value={{changeTheme,theme,darkMode,setDarkMode,stripe,setStripe,saveSettings,resetSettings,showLang,showSearch,setShowSearch,setShowLang}}>
         {children}
     </ThemeContext.Provider>
   )

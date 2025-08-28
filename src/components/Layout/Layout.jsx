@@ -3,16 +3,20 @@ import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
 import SideMenu from '../SideMenu/SideMenu'
 import  { ThemeContext } from '../../ThemeContext/ThemeContextProvider'
+import Navbars from '../Navbar/Navbars'
+
 
 const Layout = ({children}) => {
 
-  const {darkmode} = useContext(ThemeContext)
+  const {theme,darkMode} = useContext(ThemeContext)
+ console.log(theme.wideWidth)
   return (
    <>
-    <div className={`z-1 relative ${darkmode === "light"}? "bg-white" : " "`}>
-        <Navbar/>
+    <div className={`z-1 relative ${darkMode === "dark" ? "changeThemes" : " "} ${theme.wideWidth === "1200px" ? "bg-white": " " }`}>
+      
+        <Navbars/>
         <SideMenu />
-    <div className='content z-1'>
+    <div className={`content z-1 `}>
         {children}
         
     </div>

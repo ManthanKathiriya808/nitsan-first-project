@@ -5,16 +5,18 @@ import { ThemeContext } from '../../ThemeContext/ThemeContextProvider'
 const SideMenu = () => {
 
     const [toggle,setToggle] = useState(false)
-    const {changeTheme,theme,darkMode,setDarkMode,stripe,setStripe} = useContext(ThemeContext)
+    const {showLang,showSearch,setShowSearch,setShowLang,changeTheme,theme,darkMode,setDarkMode,stripe,setStripe,resetSettings,saveSettings} = useContext(ThemeContext)
     
-  
+
+
 
         const handleForm = (e)=>{
             e.preventDefault()
+            saveSettings()
         }
   return (
     // top-1/2 left-0 -translate-y-2/2
-    <div className='fixed z-4  tracking-wide top-1/2 left-0  -translate-y-1/2 '>
+    <div className='fixed z-999  tracking-wide top-1/2 left-0  -translate-y-1/2 '>
             <div className="main flex items-center flex-row-reverse">
                                 <div className='flex flex-col '>
                            <button onClick={()=> setToggle(!toggle)} className='  rounded-r-sm  mb-[2px] bg-[#002348] text-white  py-3  px-3 '>
@@ -183,17 +185,18 @@ const SideMenu = () => {
 
 
 
+                               
                                 <div className="singleData mb-3">
                                        <h5 className='mb-2'> Search Type</h5>
                                 <div className="border-none  flex style-switchers  rounded-sm">
                                 
-                               <button  value={"light"} onClick={()=> setDarkMode("light")} className={`p-2 rounded 
-            ${darkMode === "light" ? "bg-white text-black" : "bg-black text-white"}`}
+                               <button  value={showSearch} onClick={()=> setShowSearch(true)} className={`p-2 rounded 
+            ${showSearch  ? "bg-white text-black" : "bg-black text-white"}`}
         >
                                 Show
                                </button>
-                               <button value={"dark"} onClick={()=> setDarkMode("dark")}  className={`p-2 rounded 
-            ${darkMode === "dark" ? "bg-white text-black" : "bg-black text-white"}`}
+                               <button  value={showSearch} onClick={()=> setShowSearch(false)}  className={`p-2 rounded 
+            ${!showSearch  ? "bg-white text-black" : "bg-black text-white"}`}
         >
                                 Hide
                                </button>
@@ -201,17 +204,19 @@ const SideMenu = () => {
                                
                                 </div>
                                 </div>
+
+
                                 <div className="singleData mb-3">
                                        <h5 className='mb-2'> Language Type</h5>
                                 <div className="border-none  flex style-switchers  rounded-sm">
                                 
-                               <button  value={"light"} onClick={()=> setDarkMode("light")} className={`p-2 rounded 
-            ${darkMode === "light" ? "bg-white text-black" : "bg-black text-white"}`}
+                               <button  value={showLang} onClick={()=> setShowLang(true)} className={`p-2 rounded 
+            ${showLang  ? "bg-white text-black" : "bg-black text-white"}`}
         >
                                 Show
                                </button>
-                               <button value={"dark"} onClick={()=> setDarkMode("dark")}  className={`p-2 rounded 
-            ${darkMode === "dark" ? "bg-white text-black" : "bg-black text-white"}`}
+                               <button  value={showLang} onClick={()=> setShowLang(false)}  className={`p-2 rounded 
+            ${!showLang  ? "bg-white text-black" : "bg-black text-white"}`}
         >
                                 Hide
                                </button>
@@ -248,7 +253,9 @@ const SideMenu = () => {
                             <div className='text-sm flex  justify-center items-center gap-3 mb-5 border-t border-white text-white' style={{padding:"18px 30px 15px"}}>
                                 
                                     <button type='submit' className='px-3 border rounded py-1 bg-[var(--primaryClr)]'>Submit</button>
-                                    <button type='reset' className='px-3 border rounded py-1 bg-[var(--primaryClr)]'>Reset</button>
+                                    <button type='button' onClick={resetSettings} className='px-3 border rounded py-1 bg-[var(--primaryClr)]'>Reset</button>
+
+                                    
                             </div>
                         </div>
                     </form>
