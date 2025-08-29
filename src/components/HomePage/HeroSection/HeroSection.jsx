@@ -26,8 +26,8 @@ const HeroSection = () => {
 // console.log(HeroSectionContent?.rotatorBlock)
 const rortatingText = ["modern","stunning","timeless","unique"]
   return (
-    <div className=' min-h-screen flex justify-between my-7 py-7     items-center bg-[var(--secondryClr)]'>
-        <div className="grid md:grid-cols-2 h-full max-w-7xl px-5 xl:px-1 md:py-1 gap-5 gap-0 py-5 my-5 md:py-0 md:my-0 mx-auto  ">
+    <div className=' min-h-screen  py-20 mb-7   bg-[var(--secondryClr)]'>
+        <div className="grid md:grid-cols-2 h-full max-w-7xl px-5  py-20 gap-5   mx-auto  ">
             <div className="content flex  flex-col gap-5 items-start justify-center text-white">
                 <div className="rotateTxt text-7xl  tracking-normal  font-bold">
                   

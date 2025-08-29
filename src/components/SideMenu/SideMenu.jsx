@@ -5,10 +5,8 @@ import { ThemeContext } from '../../ThemeContext/ThemeContextProvider'
 const SideMenu = () => {
 
     const [toggle,setToggle] = useState(false)
-    const {showLang,showSearch,setShowSearch,setShowLang,changeTheme,theme,darkMode,setDarkMode,stripe,setStripe,resetSettings,saveSettings} = useContext(ThemeContext)
+    const {navTheme,setNavTheme,showLang,showSearch,setShowSearch,setShowLang,changeTheme,theme,darkMode,setDarkMode,stripe,setStripe,resetSettings,saveSettings} = useContext(ThemeContext)
     
-
-
 
         const handleForm = (e)=>{
             e.preventDefault()
@@ -85,19 +83,31 @@ const SideMenu = () => {
                                     <input type="text" value={theme.grayClr} onChange={(e)=> changeTheme("grayClr",e.target.value)} className='rounded-r-sm  py-0  border-none'  />
                                 </div>
                                 </div>
+
+
+
                                 <div className="singleData mb-3">
                                        <h5 className='mb-2'>Header Menu</h5>
                                 <div className="     bg-white border-none     flex  rounded-sm">
                                 
-                                    <select name="" className=' text-[1 em] traking-wide  font-normal text-gray-600 bg-white flex-grow rounded-lg border-none' id="">
-                                        <option value="">
+                                    <select name="" className=' text-[1 em] traking-wide  font-normal text-gray-600 bg-white flex-grow rounded-lg border-none' id="" value={navTheme} onChange={(e)=>setNavTheme(e.target.value)}>
+                                        <option value="without-topbar">
                                             Without Topbar
                                         </option>
-                                        <option value="">
-                                        1
+                                        <option value="default">
+                                            Default
                                         </option>
-                                        <option value="">
-                                           2
+                                        <option value="transparent">
+                                           Transparent
+                                        </option>
+                                        <option value="full-width">
+                                            Full Width 
+                                        </option>
+                                        <option value="full-width-transparent">
+                                            Full Width Transparent
+                                        </option>
+                                        <option value="full-width-without-topbar">
+                                            Full Width Without Topbar
                                         </option>
                                     </select>
                                      
@@ -111,13 +121,13 @@ const SideMenu = () => {
                                 
                                     <select name="" className=' text-[1em] tracking-wide  font-normal text-gray-600 bg-white flex-grow rounded-lg border-none' id="">
                                         <option value="">
-                                            Large Topbar
+                                            Medium Footer
                                         </option>
                                         <option value="">
-                                        1
+                                        Large SFooter
                                         </option>
                                         <option value="">
-                                           2
+                                           Small Footer
                                         </option>
                                     </select>
                                      

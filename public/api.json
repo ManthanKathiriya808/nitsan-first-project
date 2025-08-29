@@ -5840,7 +5840,7 @@
                                 "linkText": "1",
                                 "additionalAttributes": []
                               },
-                              "form": {
+                              "form": { 
                                 "id": "newsletter-2328",
                                 "api": {
                                   "status": null,
@@ -21423,6 +21423,11 @@
           "default_value": "0",
           "isInCurrentTemplate": false
         },
+
+
+
+
+
         "mobile_number": {
           "cat": "ns_basetheme",
           "subcat_name": "420",
@@ -21438,6 +21443,13 @@
           "default_value": "",
           "isInCurrentTemplate": false
         },
+
+
+
+
+
+
+        
         "email": {
           "cat": "ns_basetheme",
           "subcat_name": "420",

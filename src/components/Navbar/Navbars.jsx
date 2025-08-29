@@ -1,10 +1,14 @@
 import { useQuery } from "@tanstack/react-query";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import createQueryOptions from "../../queryOptions/createQueryOptions";
 import { IoIosMenu, IoIosSearch, IoIosArrowDown } from "react-icons/io";
 import { TbZoomCancel } from "react-icons/tb";
 import { ChevronRight, X } from "lucide-react";
 import { ThemeContext } from "../../ThemeContext/ThemeContextProvider";
+import { FaFacebookF, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import { MdOutlineLocalPhone } from "react-icons/md";
+import { CiMail } from "react-icons/ci";
+import { IoTimeOutline } from "react-icons/io5";
 
 const Navbars = () => {
   const { data: navData } = useQuery(createQueryOptions());
@@ -12,14 +16,17 @@ const Navbars = () => {
   const [toggleLang, setToggleLang] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState({});
-    const {showLang,showSearch} = useContext(ThemeContext)
-    console.log(showLang , showSearch)
+    const {showLang,showSearch,navTheme} = useContext(ThemeContext)
+  const [isScrolled, setIsScrolled] = useState(false);
   const toggleMobileDropdown = (key) => {
     setMobileDropdownOpen((prev) => ({
       ...prev,
       [key]: !prev[key],
     }));
   };
+
+  const navbarContact = navData?.page?.constants?.ns_basetheme
+
 
   const hasNestedChildren = (item) => {
     return (
@@ -28,9 +35,60 @@ const Navbars = () => {
     );
   };
 
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="fixed top-0 z-50 w-full bg-white shadow-sm">
-      <div className="max-w-7xl mx-auto">
+    
+    <div className={`fixed top-0 z-50 w-full transition 
+     ${isScrolled ? "bg-white " : "bg-transparent"} duration-550 ease-in-out ${["without-topbar", "default", "full-width","full-width-without-topbar"].includes(navTheme)  ? "bg-white "   :" "}`}>
+
+
+
+      <div className={`mx-auto ${["full-width", "full-width-transparent", "full-width-without-topbar"].includes(navTheme) ? "pl-4 pr-6  w-full":"max-w-7xl px-0 " }`}>
+      <div className={`top-menu  border-b border-[var(--textClr)]/10 h-[40px] tracking-wider flex text-sm font-light items-center justify-between lg:pr-[19px]   ${["without-topbar", "default", "full-width", "full-width-without-topbar"].includes(navTheme) || isScrolled ? "text-[var(--textClr)] " : "text-white"} ${["without-topbar" ,"full-width-without-topbar"].includes(navTheme)  ? "hidden"   :" "}`} >
+          <div className="icons  ">
+            <ul>
+              <li className="flex navbar-a ">
+                <a href="" ><FaXTwitter /></a>
+                <a href=""><FaFacebookF />
+</a>
+                <a href=""><FaLinkedinIn /></a>
+              </li>
+            </ul>
+          </div>
+          <div className="contact  items-center flex">
+              <div className="box topbar-phone  items-center gap-2 flex">
+                <MdOutlineLocalPhone className="text-lg"/>
+                <p className="lg:flex hidden">{navbarContact?.mobile_number?.value}</p>
+
+              </div>
+              <div className="box topbar-phone gap-2 items-center flex">
+               <CiMail className="text-lg"/>
+                <p className="lg:flex hidden">{navbarContact?.email?.value}</p>
+
+
+              </div>
+              <div className="box topbar-phone gap-2 items-center flex">
+               <IoTimeOutline className="text-lg"/>
+                <div className="lg:flex hidden gap-1">
+
+                <p>{navbarContact?.office_opningday?.value} </p> -
+                <p>{navbarContact?.office_weekend?.value} </p> ::
+                <p>{navbarContact?.office_start_hours?.value} </p> -
+                <p>{navbarContact?.office_close_hours?.value} </p> 
+
+                
+
+</div>
+              </div>
+          </div>
+      </div>
+
         <div
           className="flex justify-between items-center py-[20px] px-[10px] lg:px-1"
           style={{ height: "90px" }}
@@ -53,7 +111,8 @@ const Navbars = () => {
               <div key={index} className="relative group">
                 <a
                   href={item.link}
-                  className="flex items-center px-4 py-2 text-[var(--textClr)] hover:text-black transition-colors duration-200 rounded-md hover:bg-gray-50 font-light tracking-normal"
+                  className={`flex items-center px-4 py-2  transition-colors duration-200 rounded-md  font-light tracking-normal     ${["without-topbar", "default", "full-width", "full-width-without-topbar"].includes(navTheme) || isScrolled ? "text-[var(--textClr)] " : "text-white"}`}
+                
                   style={{ padding: "32px 14px" }}
                 >
                   {item.title}
@@ -69,7 +128,7 @@ const Navbars = () => {
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
                           {item.children.map((child, childIndex) => (
                             <div key={childIndex}>
-                              <h3 className="font-semibold text-[var(--primaryClr)] mb-4 border-b border-gray-100 pt-5 pb-3 mt-4">
+                              <h3 className="font-semibold text-[var(--primaryClr)] mb-4 border-b border-gray-100  pt-5 pb-3 mt-4">
                                 {child.title}
                               </h3>
                               <ul className="space-y-2">
@@ -77,7 +136,7 @@ const Navbars = () => {
                                   <li key={nestedIndex}>
                                     <a
                                       href={nestedChild.link}
-                                      className="block text-[var(--textClr)]"
+                                      className="block un text-[var(--textClr)]"
                                     >
                                       {nestedChild.title}
                                     </a>
@@ -99,7 +158,7 @@ const Navbars = () => {
                     <div
                       className={`absolute top-full left-0 bg-white shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 ${
                         hasNestedChildren(item) || item.children.length > 10
-                          ? ""
+                          ? "w-45"
                           : "w-64"
                       } py-2`}
                       style={{ padding: "3px 0 10px 10px" }}
@@ -108,9 +167,9 @@ const Navbars = () => {
                         <div key={childIndex} className="relative group/child">
                           <a
                             href={child.link}
-                            className="flex items-center justify-between px-4 py-2 text-[var(--textClr)]"
+                            className="flex items-center justify-between px-4 py-2 text-[var(--textClr)] "
                           >
-                            <span>{child.title}</span>
+                            <span className="un">{child.title}</span>
                             {child.children && child.children.length > 0 && (
                               <ChevronRight className="h-4 w-4 ml-2" />
                             )}
@@ -121,7 +180,7 @@ const Navbars = () => {
                                 <a
                                   key={nestedIndex}
                                   href={nestedChild.link}
-                                  className="block px-4 py-2 text-[var(--textClr)]"
+                                  className="block px-4 py-2 text-[var(--textClr)] un"
                                 >
                                   {nestedChild.title}
                                 </a>
@@ -142,7 +201,7 @@ const Navbars = () => {
               {!toggleSearch ? (
                 <button
                   onClick={() => setToggleSearch(!toggleSearch)}
-                  className="flex items-center px-4 py-2 text-xl text-black hover:bg-gray-50"
+                  className={`flex items-center px-4 py-2 text-xl    ${["without-topbar", "default", "full-width", "full-width-without-topbar"].includes(navTheme) || isScrolled ? "text-[var(--textClr)] " : "text-white"}`} 
                   style={{ padding: "32px 14px" }}
                 >
                   <IoIosSearch />
@@ -151,7 +210,7 @@ const Navbars = () => {
                 <div>
                   <button
                     onClick={() => setToggleSearch(!toggleSearch)}
-                    className="flex items-center px-4 py-2 text-xl text-black hover:bg-gray-50"
+                    className={`flex items-center px-4 py-2 text-xl    ${["without-topbar", "default", "full-width", "full-width-without-topbar"].includes(navTheme) || isScrolled ? "text-[var(--textClr)] " : "text-white"}`} 
                     style={{ padding: "32px 14px" }}
                   >
                     <TbZoomCancel />
@@ -335,10 +394,60 @@ const Navbars = () => {
                 )}
               </div>
             ))}
+
+              { showLang && (
+                <div>
+              {!toggleLang ? (
+                <button
+                  onClick={() => setToggleLang(!toggleLang)}
+                  className="flex items-center px-4  text-xl text-black hover:bg-gray-50"
+                >
+                  <img
+                    src="https://t3-reva.vercel.app/_next/static/media/US.89d51ae2.png"
+                    className="w-[19px] h-[19px]"
+                    alt="EN"
+                  />
+                </button>
+              ) : (
+                <div>
+                  <button
+                    onClick={() => setToggleLang(!toggleLang)}
+                    className="flex items-center px-4 text-xl text-black hover:bg-gray-50"
+                    style={{ padding: "32px 0px 32px 14px" }}
+                  >
+                    <img
+                      src="https://t3-reva.vercel.app/_next/static/media/US.89d51ae2.png"
+                      className="w-[19px] h-[19px]"
+                      alt="EN"
+                    />
+                  </button>
+                  <div className="absolute top-[100%] bg-white border-t border-[#e7e7e7] ">
+                    <div className="flex flex-col gap-1 py-2">
+                      <button className="flex items-center px-4 py-2 text-xl text-black hover:bg-gray-50">
+                        <img
+                          src="https://t3-reva.vercel.app/_next/static/media/US.89d51ae2.png"
+                          className="w-[19px] h-[19px]"
+                          alt="EN"
+                        />
+                      </button>
+                      <button className="flex items-center px-4 py-2 text-xl text-black hover:bg-gray-50">
+                        <img
+                          src="https://t3-reva.vercel.app/_next/static/media/DE.e6358f84.png"
+                          className="w-[19px] h-[19px]"
+                          alt="DE"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+        )}
           </div>
         )}
       </div>
     </div>
+
   );
 };
 

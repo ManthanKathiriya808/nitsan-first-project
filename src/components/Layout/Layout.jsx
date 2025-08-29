@@ -9,7 +9,7 @@ import Navbars from '../Navbar/Navbars'
 const Layout = ({children}) => {
 
   const {theme,darkMode} = useContext(ThemeContext)
- console.log(theme.wideWidth)
+
   return (
    <>
     <div className={`z-1 relative ${darkMode === "dark" ? "changeThemes" : " "} ${theme.wideWidth === "1200px" ? "bg-white": " " }`}>
