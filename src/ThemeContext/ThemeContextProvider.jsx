@@ -27,6 +27,7 @@ const ThemeContextProvider = ({children}) => {
   const [showSearch,setShowSearch] = useState(savedData.showSearch || true)
   const [showLang,setShowLang] = useState(savedData.showLang || true)
   const [navTheme,setNavTheme] = useState(savedData.navTheme || "without-topbar" )
+  const [footerTheme,setFooterTheme] = useState(savedData.footerTheme || "medium" )
   const changeTheme = (key,value)=>{
     setTheme((prev)=>({...prev, [key] : value}))
 
@@ -67,7 +68,7 @@ useEffect(()=>{
 
 
 const saveSettings = () =>{
-  localStorage.setItem("customTheme",  JSON.stringify({ theme, darkMode, stripe ,showLang,showSearch,navTheme}))
+  localStorage.setItem("customTheme",  JSON.stringify({ theme, darkMode, stripe ,showLang,showSearch,navTheme,footerTheme}))
 }
 
   const resetSettings = () => {
@@ -78,7 +79,7 @@ const saveSettings = () =>{
   };
   return (  
     
-    <ThemeContext.Provider value={{changeTheme,theme,darkMode,setDarkMode,stripe,setStripe,saveSettings,resetSettings,showLang,showSearch,setShowSearch,setShowLang,navTheme,setNavTheme}}>
+    <ThemeContext.Provider value={{changeTheme,theme,darkMode,setDarkMode,stripe,setStripe,saveSettings,resetSettings,showLang,showSearch,setShowSearch,setShowLang,navTheme,setNavTheme,footerTheme,setFooterTheme}}>
         {children}
     </ThemeContext.Provider>
   )
