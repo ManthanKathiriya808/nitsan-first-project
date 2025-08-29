@@ -16,7 +16,7 @@ const Navbars = () => {
   const [toggleLang, setToggleLang] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState({});
-    const {showLang,showSearch,navTheme} = useContext(ThemeContext)
+    const {showLang,showSearch,navTheme,theme} = useContext(ThemeContext)
   const [isScrolled, setIsScrolled] = useState(false);
   const toggleMobileDropdown = (key) => {
     setMobileDropdownOpen((prev) => ({
@@ -44,7 +44,7 @@ const Navbars = () => {
 
   return (
     
-    <div className={`fixed top-0 z-50 w-full transition 
+    <div className={`fixed top-0 z-50 w-full ${theme.wideWidth === "1200px"? "max-w-[1200px]" : ""} transition 
      ${isScrolled ? "bg-white " : "bg-transparent"} duration-550 ease-in-out ${["without-topbar", "default", "full-width","full-width-without-topbar"].includes(navTheme)  ? "bg-white "   :" "}`}>
 
 

@@ -117,3 +117,38 @@ body.boxed {
     margin-right: 5px;
     padding-right: 10px;
 }
+
+
+
+
+.footer-box{
+  margin: 24px 0px 0px;
+  padding: 0px 12px;
+}
+.footer-form{
+      font-weight: 400;
+    background:  color-mix(in srgb, var(--gray-color) 25%, #fff 100%);
+    border-radius: 0;
+    transition: all .25s ease-in-out;
+    min-width: 100%;
+    width: 100%;
+ 
+    outline: none;
+    line-height: 55px;
+    height: auto;
+    padding:0 20px;
+   
+    text-align: left;
+    letter-spacing: .16px;
+}
+
+.footer-btn{
+        position: absolute !important;
+        top: 0 !important;
+        right: 0 !important;
+        bottom: auto !important;
+        left: auto !important;
+        height: 49px !important;
+        margin: 4px !important; 
+        
+}
