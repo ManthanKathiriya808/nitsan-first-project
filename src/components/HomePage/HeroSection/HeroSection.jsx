@@ -26,13 +26,15 @@ const HeroSection = () => {
 // console.log(HeroSectionContent?.rotatorBlock)
 const rortatingText = ["modern","stunning","timeless","unique"]
   return (
-    <div className=' min-h-screen  py-20 mb-7   bg-[var(--secondryClr)]'>
-        <div className="grid md:grid-cols-2 h-full max-w-7xl px-5  py-20 gap-5   mx-auto  ">
+    <div className='   py-[96px] mb-7   bg-[var(--secondryClr)]'>
+        <div className="grid md:grid-cols-2 h-full max-w-7xl   pt-[96px] gap-6   mx-auto  ">
             <div className="content flex  flex-col gap-5 items-start justify-center text-white">
                 <div className="rotateTxt text-7xl  tracking-normal  font-bold">
-                  
-                    {HeroSectionContent?.preText &&  (<span className='me-4'>{HeroSectionContent?.preText}</span>)} 
+                   
+                   <div className="div mb-3  lg:flex">
+                     {HeroSectionContent?.preText &&  (<span className='me-4'>{HeroSectionContent?.preText}</span>)} 
                     <RotatingText texts={rortatingText}/>
+                   </div>
                     {/* {HeroSectionContent?.rotatorBlock[0]?.rotatorText } */}
                        
                     {/* {HeroSectionContent?.postText &&  (<span className='me-3'>{HeroSectionContent?.postText}</span>)}  */}
@@ -48,12 +50,12 @@ const rortatingText = ["modern","stunning","timeless","unique"]
 /> */}
 
 
-  <a href="https://coding-space.vercel.app/" target="_blank" class="bg-gradient-to-r from-[var(--primaryClr)]  bg-[length:100%_18px]  bg-no-repeat bg-bottom"><h1 className='text-7xl  tracking-normal  font-bold'>
+  <a href="https://coding-space.vercel.app/" target="_blank" class="bg-gradient-to-r from-[var(--primaryClr)]  bg-[length:100%_23px]  bg-no-repeat bg-bottom"><h1 className='text-7xl  tracking-normal  font-bold'>
     {HeroSectionContentmiddleText && stripHtml(HeroSectionContentmiddleText?.bodytext).substring(0,14)}
 </h1></a>
 
 <div>
-    <p className='text-xl font-light my-5'>
+    <p className='text-lg font-light my-5'>
 
     {HeroSectionContentmiddleText && stripHtml(HeroSectionContentmiddleText?.bodytext).substring(14)}
     </p>
@@ -64,7 +66,7 @@ const rortatingText = ["modern","stunning","timeless","unique"]
      
     </div>    
        </div>
-            <div className="images">
+            <div className="images  ">
                 <img src={HeroImg?.publicUrl} className='w-full h-auto' alt="" />
                 
             </div>

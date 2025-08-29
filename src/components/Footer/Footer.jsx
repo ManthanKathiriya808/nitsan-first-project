@@ -26,7 +26,7 @@ const {footerTheme} = useContext(ThemeContext)
 
 
       <div className={`div text-start text-[18px]  border-b border-[var(--textClr)]/10 ${footerTheme === "small" ? "mb-4": "mb-[40px] lg:mb-[80px]"}`} style={   { padding: "20px 0 10px"}}>
-          <div className="class lg:px-1  px-3  flex flex-col gap-6 lg:gap-0 lg:flex-row items-center justify-between">
+          <div className="class lg:px-1  px-3  flex flex-col gap-6 lg:gap-0 lg:flex-row lg:items-center justify-between">
         <div className="links flex flex-col lg:flex-row  gap-[20px] text-[16px]" style={{    padding: "20px 0 10px"}}>
           { data?.page?.footerNavigation.map((ele,index)=>(
             <div className="footerLinks" key={index}>

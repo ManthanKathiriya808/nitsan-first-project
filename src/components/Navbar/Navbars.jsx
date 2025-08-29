@@ -90,18 +90,17 @@ const Navbars = () => {
       </div>
 
         <div
-          className="flex justify-between items-center py-[20px] px-[10px] lg:px-1"
+          className="flex justify-between items-center py-[20px] px-[10px] lg:px-0"
           style={{ height: "90px" }}
         >
           {/* Logo */}
           <a href="/">
             <img
               loading="lazy"
-              width={100}
-              height={50}
+        
               src="https://t3-reva.t3planet.com/fileadmin/t3-reva/Logo/T3_Reva_Final_Logo.svg"
               alt="Logo"
-              className="h-8"
+              className="w-[100%]"
             />
           </a>
 

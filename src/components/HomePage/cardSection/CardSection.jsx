@@ -18,7 +18,7 @@ const cardData4 = data?.content?.colPos0[5]?.content?.items
   return (
     <div className='cardsection grid grid-cols-1 gap-5    px-3 '>
             <div className="card1 pb-6">
-                    <div className="div grid grid-cols-1 gap-5 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 my-3">
+                    <div className="div grid grid-cols-1 gap-15 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 my-3">
 
             {
                 cardData1?.map((ele,index)=>(

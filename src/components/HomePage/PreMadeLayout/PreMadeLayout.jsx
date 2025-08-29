@@ -14,7 +14,7 @@ const header = base1?.bodytext ?? ""
 const counte1 = base1?.contentElements?.[1]?.content ?? null
 
    
-    console.log(cards)
+    // console.log(cards)
 
   return (
 <div className="div my-3 py-3 lg:my-10 lg:py-10">

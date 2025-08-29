@@ -20,8 +20,8 @@ const textData = data?.content?.colPos0[1]?.content?.items[0]?.contentElements[0
         } */}
           
         <h1 className=''> <GradientText text={stripHtml(textData).substring(0,21)}/></h1>
-<br />
-<p className='text-xl 
+
+<p className='text-lg 
  font-light'>
   {stripHtml(textData)?.split("8+ Pre-Built websites")[1]?.split("Contact Us")[0]?.replace(/&nbsp;/g  ," ")}
 </p>

@@ -4,7 +4,7 @@ const GradientBtn = ({data}) => {
     
     
   return (
-          <button type="button" class="text-white  flex items-center gap-3 bg-gradient-to-br from-[var(--primaryClr)] to-[var(--teritoryClr)] hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium  text-lg px-10 py-3.5 text-lg text-center "  > <span dangerouslySetInnerHTML={{__html:data}} /><svg class="rtl:rotate-180  h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+          <button type="button" class="text-white font-bold  flex items-center gap-3 bg-gradient-to-br from-[var(--primaryClr)] to-[var(--teritoryClr)] hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium  text-md px-[32px] py-[16px]  text-center "  > <span dangerouslySetInnerHTML={{__html:data}} /><svg class="rtl:rotate-180  h-2 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
 </svg>
 
