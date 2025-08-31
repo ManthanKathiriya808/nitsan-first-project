@@ -64,7 +64,7 @@ const CounterSection = () => {
              </div>
 
               </div>
-              <div className="image   " style={{padding:"0px ", margin:"24px 0px 0px "}}>
+              <div className="image   px-2 lg:px-0" style={{margin:"24px 0px 0px "}}>
                 <img src={base2} style={{width:"100%",height:"auto"}} alt=""  />
               </div>
         </div>

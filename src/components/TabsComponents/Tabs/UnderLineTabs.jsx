@@ -32,7 +32,7 @@ const UnderLineTabs = ({tabs}) => {
 
 
   return (
-    <div className="px-3"> 
+    <div className="lg:px-3"> 
       {/* Tabs Header */}
       <div className=" border-b  border-gray-200 dark:border-gray-700">
         <ul className="flex flex-wrap justify-evenly  text-center">
@@ -71,7 +71,7 @@ const UnderLineTabs = ({tabs}) => {
                    {  
                       ele?.contentBlock?.map((e,index)=>(
                             <div className="py-[32px] my-8  rounded-lg grid  grid-cols-1 lg:grid-cols-2   ">
-            <div className="title  my-[89px] px-[12px]">
+            <div className="title  my-[89px] lg:px-[12px]">
               
     <h1 className='leading-8'>
                     </h1>
@@ -79,8 +79,8 @@ const UnderLineTabs = ({tabs}) => {
                                   { e?.contentText && parse(e.contentText,options)}       
                     
             </div>
-            <div className="image   my-[48px] px-[12px]">
-              <img src={e?.contentImage[0]?.publicUrl} style={{height:"100%"}} className="  "  alt="" />
+            <div className="image   lg:my-[48px] lg:px-[12px]">
+              <img src={e?.contentImage[0]?.publicUrl} style={{height:"100%"}}   alt="" />
             </div>
           </div>
                       ))
