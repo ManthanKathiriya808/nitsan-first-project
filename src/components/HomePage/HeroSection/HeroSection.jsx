@@ -26,7 +26,7 @@ const HeroSection = () => {
 // console.log(HeroSectionContent?.rotatorBlock)
 const rortatingText = ["modern","stunning","timeless","unique"]
   return (
-    <div className='   py-[96px] mb-7   bg-[var(--secondryClr)]'>
+    <div className='   py-[96px] mb-7 px-3 md:px-0  bg-[var(--secondryClr)]'>
         <div className="grid md:grid-cols-2 h-full max-w-7xl   pt-[96px] gap-6   mx-auto  ">
             <div className="content flex  flex-col gap-5 items-start justify-center text-white">
                 <div className="rotateTxt text-7xl  tracking-normal  font-bold">
@@ -50,12 +50,12 @@ const rortatingText = ["modern","stunning","timeless","unique"]
 /> */}
 
 
-  <a href="https://coding-space.vercel.app/" target="_blank" class="bg-gradient-to-r from-[var(--primaryClr)]  bg-[length:100%_23px]  bg-no-repeat bg-bottom"><h1 className='text-7xl  tracking-normal  font-bold'>
+  <a href="https://coding-space.vercel.app/" target="_blank" class="bg-gradient-to-r pb-2 from-[var(--primaryClr)]  bg-[length:100%_25px]  bg-no-repeat bg-bottom"><h1 className='text-7xl  tracking-normal  font-bold'>
     {HeroSectionContentmiddleText && stripHtml(HeroSectionContentmiddleText?.bodytext).substring(0,14)}
 </h1></a>
 
 <div>
-    <p className='text-lg font-light my-5'>
+    <p className='text-lg font-light tracking-wide my-2 mb-6'>
 
     {HeroSectionContentmiddleText && stripHtml(HeroSectionContentmiddleText?.bodytext).substring(14)}
     </p>

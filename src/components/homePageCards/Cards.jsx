@@ -4,10 +4,10 @@ import { FaArrowRight } from "react-icons/fa";
 const Cards = ({ele}) => {
   return (
      <div className="single-card">
-                <div className="box hover:bg-white hove:ease-in-out hover:duration-600 relative inline-block pb-3 
+                <div className="box hover:bg-white hove:ease-in-out hover:duration-600 relative inline-block 
              after:content-[''] after:absolute after:left-0 after:bottom-0 
              after:w-0 after:h-[4px] after:bg-[var(--primaryClr)]
-             after:transition-all after:duration-300 hover:after:w-full bg-[var(--grayClr)]/30" style={{padding:"35px 35px 38px"}}>
+             after:transition-all after:duration-300 hover:after:w-full bg-[var(--grayClr)]/30" style={{padding:"35px 35px 38px",margin:"0 0 30px"}}>
                   <a href={ele.contentElements[0]?.content?.contentLink?.href}>
                     <img src={ele.contentElements[0]?.content?.icon[0]?.publicUrl} alt="" />
 

@@ -14,20 +14,20 @@ const header = base1?.contentElements[0]?.content?.bodytext
 const tabs = base1?.contentElements[1]?.content?.contentTabBlock
 
   return (
-      <div className="div bg-[var(--grayClr)]/30 my-10 py-10">
-      <div className=' max-w-7xl mx-auto'>
-          <div className="title my-5 py-5 text-center">
-            <div className="heading flex justify-center flex-col text-center">
-                    <h1 className='leading-8'>
+      <div className="div bg-[var(--grayClr)]/30 py-[96px]">
+      <div className=' mx-[39.5px] px-[12px] '>
+          <div className="title mb-[48px]  text-center">
+            <div className="heading flex  justify-center flex-col text-center">
+                    <h1 className='leading-8 mb-[8px]'>
                       <GradientText className="" text= {stripHtml(header).replace(/&nbsp;/g  ," ").split("We bring")[0]} />
                     </h1>
-                    <p className='text-lg leading-7 font-light my-2 py-4 max-w-[550px] mx-auto '>
+                    <p className='text-[18px] leading-7 font-light mb-[16px] max-w-[550px] mx-auto '>
                         {stripHtml(header).replace(/&nbsp;/g  ," ").split("editing tools")[1]}
                     </p>
             </div>
           
         </div>
-        <div className='my-5 py-5'>
+        <div className='pt-[48px]'>
           <UnderLineTabs tabs={tabs}/>
 
 

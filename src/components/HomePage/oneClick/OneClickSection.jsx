@@ -13,34 +13,43 @@ const content = base1?.contentElements[1]?.content?.processBlock
 
 
   return (
-    <div className="div my-10 py-10">
-        <div className="title my-5 py-5 text-center">
-            <div className="heading ">
-                    <h1 className='leading-8'>
+    <div className="div pt-[96px]">
+        <div className="title relative  text-center">
+            <div className="heading pb-[16px]">
+                    <h1 className=''>
                       <GradientText className="" text= {stripHtml(header).replace(/&nbsp;/g  ," ").split("Set up you")[0]} />
                     </h1>
-                    <p className='text-lg leading-4 font-light my-2 py-4'>
+                    <p className='text-lg max-w-[390px] mx-auto leading-7 font-light my-2 '>
                         {stripHtml(header).replace(/&nbsp;/g  ," ").split("demo install")[1]}
                     </p>
             </div>
-            <div className="content flex justify-evenly py-10  my-5">
+            <div className="content  mt-8 lg:mt-0 flex flex-col gap-4 lg:gap-0 lg:flex-row justify-evenly  ">
               
 
                 {
                     content?.map((ele,index)=>(
-                        <div className="div pt-10">
+                        <div key={index} className={`div   px-[40px] ${index== 0 ? "lg:mt-[50px] " : index==1 ? "lg:mt-[100px]" :"lg:mt-[150px]"}`}>
                                <button class="
                                bg-[var(--primaryClr)]
                                text-white
-                               transition delay-150 duration-300 ease-in-out px-10 py-8 text-5xl font-light hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 ...">
+                               transition delay-150 duration-300 ease-in-out w-[100px] h-[100px] text-[40px] font-light hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 ...">
                 {ele.processNumber}
                 </button> 
-                <h3 className='py-5 my-8 text-2xl text-[var(--secondryClr)]'>{stripHtml(ele.processText)}</h3>
+                <div className="div "></div>
+                <h3 className='py-5 my-8 text-[24px] font-semibold text-[var(--secondryClr)]'>{stripHtml(ele.processText)}</h3>
                         </div>
                     ))
                 } 
+
                 
             </div>
+           
+
+              <div className="div hidden lg:flex">
+                  <div className="div   oneClick1"></div>
+                <div className="div   oneClick2"></div>
+              </div>
+
         </div>
     </div>
   )

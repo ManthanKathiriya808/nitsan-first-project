@@ -19,38 +19,38 @@ const FluidAndResponsive = () => {
 
 
   return (
-    <div className=' px-3 overflow-hidden py-5 md:px-4 my-5 min-h-screen flex items-center justify-center  bg-[var(--grayClr)]/30'>
-        <div className=' py-6 grid grid-cols-1 lg:ms-5 lg:ps-10 lg:grid-cols-2 gap-10 lg:gap-8     h-full'>
-              <div className="contents  justify-center  flex flex-col ">
-                <div className="heading ">
-                    <h1 className='leading-8'>
+    <div className='   py-[50px]   lg:py-[96px] flex items-center justify-center  bg-[var(--grayClr)]/30'>
+        <div className='  grid grid-cols-1 max-w-7xl lg:grid-cols-2     '>
+              <div className="contents   mt-[24px] justify-center px-3 lg:px-0  flex flex-col ">
+                <div className="heading pb-[32px]">
+                    <h1 className='leading-8 mb-[8px]'>
                       <GradientText className="" text= {stripHtml(header).replace(/&nbsp;/g  ," ").split("No matter what")[0]} />
                     </h1>
-                    <p className='text-lg leading-8 font-light my-4 py-4'>
+                    <p className='text-[18px] pt-5  max-w-[430px] font- mb-[16px] '>
                         {stripHtml(header).replace(/&nbsp;/g  ," ").split("all device types")[1]}
                     </p>
                 </div>
-             <div className=' flex py-5  flex-col md:flex-row justify-evenly gap-7'>
+             <div className=' flex   flex-col md:flex-row justify-evenly px-[12px]'>
        {
                         counte1?.items?.map((item)=>(
                        
                             
-                  <div className='  flex flex-col   items-center w-100'>
+                  <div className='  flex flex-col   items-center px-[35px] py-[32px]'>
                        {   item?.contentElements.map((ele)=>(
                             <div >
 
-                        <div className="div1 mt-5  text-start">
-                         <h1 className='text-6xl mb-5 font-bold text-[var(--secondryClr)] flex  justify-start gap-1'>
+                        <div className="div1   text-start">
+                      
                              
 
 
-<img src= {ele.content?.icon[0]?.publicUrl} className='my-3' alt="" />
-                         </h1>
+<img src= {ele.content?.icon[0]?.publicUrl} className='mb-[20px] pb-[20px]' alt="" />
+                         
 
-                            <h1 className='text-2xl text-[var(--secondryClr)] leading-8  mb-2 font-bolder '>
+                            <h1 className='text-[24px] text-[var(--secondryClr)]  mb-[20px] font-bolder '>
                                 {ele.content?.header}
                             </h1>
-                            <p className='text-lg mt-5 leading-7 font-light '>{stripHtml(ele.content?.text).replace(/&nbsp;/g  ," ")}</p>
+                            <p className='text-[20px] mb-[16px]  font-light '>{stripHtml(ele.content?.text).replace(/&nbsp;/g  ," ")}</p>
                         </div>
 
                             </div>
@@ -63,8 +63,8 @@ const FluidAndResponsive = () => {
              </div>
 
               </div>
-              <div className="image  left-25 overflow-hidden flex flex-col gap-6 items-center py-5 lg:py-0 lg:relative ">
-                <img src={base2} style={{width:"502px",height:"312px"}} className='lg:absolute lg:left-0 lg:bottom-25' alt=""  />
+              <div className="image left-25 items-center gap-5 lg:gap-0 overflow-hidden flex flex-col px-3 lg:px-0  lg:ms-[20px] lg:relative ">
+                <img src={base2} style={{width:"502px",height:"312px"}} className='lg:absolute lg:left-0 lg:bottom-50 ' alt=""  />
                 <img src={base3} style={{width:"223px",height:"425px"}} className='lg:absolute lg:left-0'  alt=""  />
               </div>
         </div>

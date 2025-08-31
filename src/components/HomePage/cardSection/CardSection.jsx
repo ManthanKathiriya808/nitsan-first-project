@@ -16,13 +16,13 @@ const cardData4 = data?.content?.colPos0[5]?.content?.items
 
 
   return (
-    <div className='cardsection grid grid-cols-1 gap-5    px-3 '>
-            <div className="card1 pb-6">
-                    <div className="div grid grid-cols-1 gap-15 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 my-3">
+    <div className='cardsection grid grid-cols-1      '>
+            <div className="card1 pb-[32px]">
+                    <div className="div grid grid-cols-1  md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 ">
 
             {
                 cardData1?.map((ele,index)=>(
-                    <div key={index}>
+                    <div key={index} className='px-[12px]'>
 
                         <Cards ele={ele}/>
                    
@@ -32,12 +32,13 @@ const cardData4 = data?.content?.colPos0[5]?.content?.items
       
         </div>
             </div>
-            <div className="card2 pb-6">
-                    <div className="div grid grid-cols-1 gap-5 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 my-3">
+           
+            <div className="card1 pb-[32px]">
+                    <div className="div grid grid-cols-1  md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 ">
 
             {
                 cardData2?.map((ele,index)=>(
-                    <div key={index}>
+                    <div key={index} className='px-[12px]'>
 
                         <Cards ele={ele}/>
                    
@@ -47,12 +48,13 @@ const cardData4 = data?.content?.colPos0[5]?.content?.items
       
         </div>
             </div>
-            <div className="card3 pb-6">
-                    <div className="div grid grid-cols-1 gap-5 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 my-3">
+           
+            <div className="card1 pb-[32px]">
+                    <div className="div grid grid-cols-1  md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 ">
 
             {
                 cardData3?.map((ele,index)=>(
-                    <div key={index}>
+                    <div key={index} className='px-[12px]'>
 
                         <Cards ele={ele}/>
                    
@@ -62,12 +64,13 @@ const cardData4 = data?.content?.colPos0[5]?.content?.items
       
         </div>
             </div>
-            <div className="card4 pb-6">
-                    <div className="div grid grid-cols-1 gap-5 md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 my-3">
+           
+            <div className="card1 pb-[32px]">
+                    <div className="div grid grid-cols-1  md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 ">
 
             {
                 cardData4?.map((ele,index)=>(
-                    <div key={index}>
+                    <div key={index} className='px-[12px]'>
 
                         <Cards ele={ele}/>
                    
@@ -77,6 +80,7 @@ const cardData4 = data?.content?.colPos0[5]?.content?.items
       
         </div>
             </div>
+           
     </div>
   )
 }

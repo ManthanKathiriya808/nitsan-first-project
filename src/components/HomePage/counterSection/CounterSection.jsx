@@ -18,28 +18,28 @@ const CounterSection = () => {
 
 
   return (
-    <div className=' px-3 py-5 md:px-4 my-5 min-h-screen  flex items-center justify-center  bg-[var(--grayClr)]/30'>
-        <div className=' py-6 grid grid-cols-1 lg:ms-5 lg:ps-10 lg:grid-cols-2 gap-10 lg:gap-4   h-full'>
-              <div className="contents  justify-center  flex flex-col ">
+    <div className='  py-[96px] md:px-4    flex items-center justify-center  bg-[var(--grayClr)]/30'>
+        <div className='  grid grid-cols-1 lg:ms-5 lg:grid-cols-2  py-[30px]  h-full'>
+              <div className="contents  justify-center   flex flex-col lg:py-[40px] px-[12px] lg:mt-[24px] lg:ms-[203.164px]" >
                 <div className="heading ">
-                    <h1 className='leading-8'>
+                    <h1 className='leading-8 mb-[16px]'>
                       <GradientText className="" text= {stripHtml(header).replace(/&nbsp;/g  ," ").split("Each shortcode")[0]} />
                     </h1>
-                    <p className='text-lg leading-8 font-light my-4 py-4'>
+                    <p className='text-[18px] leading-8 font-light mb-[16px] py-4'>
                         {stripHtml(header).replace(/&nbsp;/g  ," ").split("imagine them.")[1]}
                     </p>
                 </div>
-             <div className=' flex  flex-col overflow-hidden md:flex-row text-start md:justify-evenly gap-3'>
+             <div className=' flex items-center lg:items-start  flex-col overflow-hidden md:flex-row text-start md:justify-evenly  pt-[40px]'>
        {
                         counte1?.items?.map((item)=>(
                        
                             
-                  <div className='  flex flex-col  items-center w-100'>
+                  <div className='  flex flex-col justify-center text-center w-100'>
                        {   item?.contentElements.map((ele)=>(
                             <div >
 
                         <div className="div1 ">
-                         <h1 className='text-6xl mb-5  font-bold text-[var(--secondryClr)] flex  justify-center gap-1'>
+                         <h1 className='text-[72px]   font-bold text-[var(--secondryClr)] flex  justify-center '>
                               { ele?.content?.counterData ?
                                 <CountUp to= {Number(ele?.content?.counterData)}/> : ""
                               }
@@ -48,10 +48,10 @@ const CounterSection = () => {
 
                          </h1>
 
-                            <h1 className='text-2xl  leading-8  mb-2 font-bolder '>
+                            <h1 className='text-[24px] mt-[13px]   font-bolder '>
                                 {ele.content?.header}
                             </h1>
-                            <p className='md:text-lg text-md overflow-hidden leading-7 font-light '>{stripHtml(ele.content?.bodytext).replace(/&nbsp;/g  ," ")}</p>
+                            <p className='overflow-hidden leading-7 tracking-wider font-light '>{stripHtml(ele.content?.bodytext).replace(/&nbsp;/g  ," ")}</p>
                         </div>
 
                             </div>
@@ -64,8 +64,8 @@ const CounterSection = () => {
              </div>
 
               </div>
-              <div className="image   ">
-                <img src={base2} style={{width:"100%"}} alt=""  />
+              <div className="image   " style={{padding:"0px ", margin:"24px 0px 0px "}}>
+                <img src={base2} style={{width:"100%",height:"auto"}} alt=""  />
               </div>
         </div>
 
