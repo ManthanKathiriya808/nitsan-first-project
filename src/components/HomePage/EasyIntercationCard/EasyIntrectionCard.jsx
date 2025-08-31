@@ -11,7 +11,7 @@ const header = base1?.contentElements[0]?.content?.bodytext
 const cards = base1?.contentElements[1]?.content?.items
 
   return (
-      <div className="div  ">
+      <div className="div  overflow-hidden">
       <div className='  max-w-7xl mx-auto'>
           <div className="title   text-center" style={{padding:"96px 0px 32px"}}>
             <div className="heading flex justify-center flex-col text-center">

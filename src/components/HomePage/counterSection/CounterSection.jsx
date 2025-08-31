@@ -18,7 +18,7 @@ const CounterSection = () => {
 
 
   return (
-    <div className='  py-[96px] md:px-4    flex items-center justify-center  bg-[var(--grayClr)]/30'>
+    <div className='  py-[96px] md:px-4 overflow-hidden   flex items-center justify-center  bg-[var(--grayClr)]/30'>
         <div className='  grid grid-cols-1 lg:ms-5 lg:grid-cols-2  py-[30px]  h-full'>
               <div className="contents  justify-center   flex flex-col lg:py-[40px] px-[12px] lg:mt-[24px] lg:ms-[203.164px]" >
                 <div className="heading ">

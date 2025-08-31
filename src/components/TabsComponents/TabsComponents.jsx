@@ -14,7 +14,7 @@ const header = base1?.contentElements[0]?.content?.bodytext
 const tabs = base1?.contentElements[1]?.content?.contentTabBlock
 
   return (
-      <div className="div bg-[var(--grayClr)]/30 py-[96px]">
+      <div className="div overflow-hidden bg-[var(--grayClr)]/30 py-[96px]">
       <div className=' mx-[39.5px] px-[12px] '>
           <div className="title mb-[48px]  text-center">
             <div className="heading flex  justify-center flex-col text-center">

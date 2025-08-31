@@ -44,7 +44,7 @@ const Navbars = () => {
 
   return (
     
-    <div className={`fixed top-0 z-50 w-full ${theme.wideWidth === "1200px"? "max-w-[1200px]" : ""} transition 
+    <div className={`fixed top-0 z-50 overflow-hidden w-full ${theme.wideWidth === "1200px"? "max-w-[1200px]" : ""} transition 
      ${isScrolled ? "bg-white " : "bg-transparent"} duration-550 ease-in-out ${["without-topbar", "default", "full-width","full-width-without-topbar"].includes(navTheme)  ? "bg-white "   :" "}`}>
 
 

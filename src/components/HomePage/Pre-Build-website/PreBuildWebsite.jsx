@@ -12,7 +12,7 @@ const PreBuildWebsite = () => {
     
 const textData = data?.content?.colPos0[1]?.content?.items[0]?.contentElements[0]?.content?.bodytext
   return (
-    <div className='my-8  py-5   '>
+    <div className='my-8 overflow-hidden py-5   '>
       <div className="div max-w-[600px]  flex  flex-col  mx-auto text-center py-5 my-5 ">
         {/* {
             textData && ( textData ? <GradientText text={textData}/> : {textData})

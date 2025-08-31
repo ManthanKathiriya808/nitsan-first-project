@@ -19,7 +19,7 @@ const FluidAndResponsive = () => {
 
 
   return (
-    <div className='   py-[50px]   lg:py-[96px] flex items-center justify-center  bg-[var(--grayClr)]/30'>
+    <div className='   py-[50px]  overflow-hidden lg:py-[96px] flex items-center justify-center  bg-[var(--grayClr)]/30'>
         <div className='  grid grid-cols-1 max-w-7xl lg:grid-cols-2     '>
               <div className="contents   mt-[24px] justify-center px-3 lg:px-0  flex flex-col ">
                 <div className="heading pb-[32px]">

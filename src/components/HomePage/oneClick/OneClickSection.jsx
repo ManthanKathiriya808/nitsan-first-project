@@ -13,7 +13,7 @@ const content = base1?.contentElements[1]?.content?.processBlock
 
 
   return (
-    <div className="div pt-[96px]">
+    <div className="div overflow-hidden pt-[96px]">
         <div className="title relative  text-center">
             <div className="heading pb-[16px]">
                     <h1 className=''>
