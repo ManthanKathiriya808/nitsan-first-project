@@ -12,6 +12,7 @@ import TabsComponents from '../components/TabsComponents/TabsComponents'
 import EasyIntrectionCard from '../components/HomePage/EasyIntercationCard/EasyIntrectionCard'
 import FluidAndResponsive from '../components/HomePage/FluidAndResponsive/FluidAndResponsive'
 import PreMadeLayout from '../components/HomePage/PreMadeLayout/PreMadeLayout'
+import MoreFeaturesCard from '../components/HomePage/MoreFeaturesCard/MoreFeaturesCard'
 
 
 const Home = () => {
@@ -27,6 +28,7 @@ const Home = () => {
         <EasyIntrectionCard/>
         <FluidAndResponsive/>
         <PreMadeLayout/>
+        <MoreFeaturesCard/>
     </Layout>
   )
 }

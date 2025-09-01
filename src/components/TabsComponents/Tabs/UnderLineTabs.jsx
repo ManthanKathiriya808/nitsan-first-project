@@ -12,7 +12,7 @@ const UnderLineTabs = ({tabs}) => {
       replace: (domNode)=>{
         if(domNode.name=== "p"){
             return (
-              <p className='text-[18px] leading-7 font-light mb-[16px]  '>
+              <p className='text-[18px] leading-7 font- mb-[16px]  '>
                   {domToReact(domNode.children,options)}
               </p>
             )

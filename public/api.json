@@ -3413,20 +3413,6 @@
           }
         }
       },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       {
         "id": 873,
         "type": "ns_base_container",
@@ -3753,17 +3739,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-      
       {
         "id": 882,
         "type": "ns_base_container",
@@ -4112,7 +4087,12 @@
                       "offset_column_xxl_3": ""
                     }
                   }
-                },
+                }, 
+                
+                
+
+
+                
                 {
                   "id": 935,
                   "type": "ns_base_3Cols",
@@ -4733,6 +4713,15 @@
           }
         }
       },
+
+
+
+
+
+
+
+
+
       {
         "id": 757,
         "type": "ns_base_container",

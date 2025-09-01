@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import Navbar from '../Navbar/Navbar'
+
 import Footer from '../Footer/Footer'
 import SideMenu from '../SideMenu/SideMenu'
 import  { ThemeContext } from '../../ThemeContext/ThemeContextProvider'
