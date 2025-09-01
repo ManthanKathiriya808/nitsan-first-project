@@ -30,8 +30,8 @@ const Navbars = () => {
 
   const hasNestedChildren = (item) => {
     return (
-      item.children &&
-      item.children.some((child) => child.children && child.children.length > 0)
+      item?.children &&
+      item?.children.some((child) => child?.children && child?.children?.length > 0)
     );
   };
 
@@ -44,7 +44,7 @@ const Navbars = () => {
 
   return (
     
-    <div className={`fixed top-0 z-50 overflow-hidden w-full ${theme.wideWidth === "1200px"? "max-w-[1200px]" : ""} transition 
+    <div className={`fixed top-0 z-50  w-full ${theme.wideWidth === "1200px"? "max-w-[1200px]" : ""} transition 
      ${isScrolled ? "bg-white " : "bg-transparent"} duration-550 ease-in-out ${["without-topbar", "default", "full-width","full-width-without-topbar"].includes(navTheme)  ? "bg-white "   :" "}`}>
 
 
@@ -125,13 +125,13 @@ const Navbars = () => {
                     <div className="fixed left-0 w-full bg-white shadow-xl border-t border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-10 z-40">
                       <div className="max-w-7xl mx-auto px-6">
                         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
-                          {item.children.map((child, childIndex) => (
+                          {item?.children?.map((child, childIndex) => (
                             <div key={childIndex}>
                               <h3 className="font-semibold text-[var(--primaryClr)] mb-4 border-b border-gray-100  pt-5 pb-3 mt-4">
                                 {child.title}
                               </h3>
                               <ul className="space-y-2">
-                                {child.children?.map((nestedChild, nestedIndex) => (
+                                {child?.children?.map((nestedChild, nestedIndex) => (
                                   <li key={nestedIndex}>
                                     <a
                                       href={nestedChild.link}
@@ -150,23 +150,23 @@ const Navbars = () => {
                   )}
 
                 {/* Normal Dropdown */}
-                {item.title !== "Elements" &&
-                  item.hasSubpages &&
-                  item.children &&
-                  item.children.length > 0 ? (
+                {item?.title !== "Elements" &&
+                  item?.hasSubpages &&
+                  item?.children &&
+                  item?.children?.length > 0 ? (
                     <div
                       className={`absolute top-full left-0 bg-white shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 ${
                         hasNestedChildren(item) || item.children.length > 10
                           ? "w-45"
                           : "w-64"
-                      } py-2`}
-                      style={{ padding: "3px 0 10px 10px" }}
+                      } `}
+                      style={{ padding: "10px 0 10px 10px" }}
                     >
-                      {item.children.map((child, childIndex) => (
-                        <div key={childIndex} className="relative group/child">
+                      {item?.children?.map((child, childIndex) => (
+                        <div key={childIndex} className="relative  group/child">
                           <a
                             href={child.link}
-                            className="flex items-center justify-between px-4 py-2 text-[var(--textClr)] "
+                            className="flex items-center justify-between px-4 py-[6px]  text-[var(--textClr)] "
                           >
                             <span className="un">{child.title}</span>
                             {child.children && child.children.length > 0 && (
@@ -189,7 +189,7 @@ const Navbars = () => {
                         </div>
                       ))}
                     </div>
-                  ) : " "}
+                  ) : null }
               </div>
             ))}
 
