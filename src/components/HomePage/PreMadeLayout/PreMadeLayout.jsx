@@ -49,7 +49,6 @@ const options = {
 }
    
 
-    console.log(cards[0]?.contentElements[0].content.featuredText)
 
   return (
 <div className="div overflow-hidden ">
