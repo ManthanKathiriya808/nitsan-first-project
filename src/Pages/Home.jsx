@@ -13,6 +13,7 @@ import EasyIntrectionCard from '../components/HomePage/EasyIntercationCard/EasyI
 import FluidAndResponsive from '../components/HomePage/FluidAndResponsive/FluidAndResponsive'
 import PreMadeLayout from '../components/HomePage/PreMadeLayout/PreMadeLayout'
 import MoreFeaturesCard from '../components/HomePage/MoreFeaturesCard/MoreFeaturesCard'
+import TestimonialSlider from '../components/HomePage/TestimonailSlider/TestimonialSlider'
 
 
 const Home = () => {
@@ -29,6 +30,7 @@ const Home = () => {
         <FluidAndResponsive/>
         <PreMadeLayout/>
         <MoreFeaturesCard/>
+        <TestimonialSlider/>
     </Layout>
   )
 }

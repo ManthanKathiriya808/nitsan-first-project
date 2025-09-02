@@ -47,19 +47,19 @@ const options ={
 
   return (
     <div className='bg-[var(--grayClr)]/30 '>
-        <div className="div px-[12px] lg:mx-[39.5px]  ">
-            <div className="title pt-[95px] pb-[48px] text-center">
+        <div className="div px-[12px] lg:mx-[40px]  ">
+            <div className="title pt-[95px]  pb-[48px] text-center">
                 {title && parse(title,options)}
             </div>
             <div className="content ">
            
-                <div className="box1 place-items-center grid grid-cols-1  lg:grid-cols-3">
+                <div className="box1 items-stretch  place-items-center grid grid-cols-1  lg:grid-cols-3">
                         {
                             box1?.map((ele,index)=>(
                                 <div className="div px-[12px] mt-[24px]" key={index}>
                                     {
                                         ele?.contentElements?.map((e,i)=>(
-                                             <div className="div bg-white px-[40px] pt-[32px] lg:items-start lg:gap-8 lg:flex" key={i}>
+                                             <div className="div bg-white h-full px-[40px] pt-[32px] lg:items-start lg:gap-8 lg:flex" key={i}>
                              <div className="icon  ">
                                     <img src={e?.content?.icon[0]?.publicUrl} className='   mr-[25px] mb-[20px] w-[32px] lg:w-[80px]  ' alt="" />
                                 </div>
@@ -81,13 +81,13 @@ const options ={
                             ))
                         }
                 </div>
-                <div className="box1 place-items-center grid grid-cols-1 pt-[32px]  lg:grid-cols-3">
+                <div className="box1 place-items-center grid grid-cols-1 pt-[12px] items-stretch  lg:grid-cols-3">
                         {
                             box2?.map((ele,index)=>(
-                                <div className="div px-[12px] mt-[24px]" key={index}>
+                                <div className="div   px-[12px] mt-[24px]" key={index}>
                                     {
                                         ele?.contentElements?.map((e,i)=>(
-                                             <div className="div bg-white px-[40px] pt-[32px] lg:items-start lg:gap-8 lg:flex" key={i}>
+                                             <div className="div bg-white px-[40px] pt-[32px] h-full lg:items-start lg:gap-8 lg:flex" key={i}>
                             <div className="icon  ">
                                     <img src={e?.content?.icon[0]?.publicUrl} className='   mr-[25px] mb-[20px] w-[32px] lg:w-[80px]  ' alt="" />
                                 </div>
@@ -109,13 +109,13 @@ const options ={
                             ))
                         }
                 </div>
-                <div className="box1 place-items-center grid grid-cols-1 pt-[32px] pb-[64px] lg:grid-cols-3">
+                <div className="box1 items-stretch  place-items-center grid grid-cols-1 pt-[12px] pb-[64px] lg:grid-cols-3">
                         {
                             box3?.map((ele,index)=>(
                                 <div className="div px-[12px] mt-[24px]" key={index}>
                                     {
                                         ele?.contentElements?.map((e,i)=>(
-                                             <div className="div bg-white px-[40px] pt-[32px] lg:items-start lg:gap-8 lg:flex" key={i}>
+                                             <div className="div bg-white h-full px-[40px] pt-[32px] lg:items-start lg:gap-8 lg:flex" key={i}>
                                 <div className="icon  ">
                                     <img src={e?.content?.icon[0]?.publicUrl} className='   mr-[25px] mb-[20px] w-[32px] lg:w-[80px]  ' alt="" />
                                 </div>
