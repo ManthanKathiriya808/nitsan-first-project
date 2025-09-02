@@ -25,7 +25,7 @@ const TestimonialSlider = () => {
 const base = data?.content?.colPos0?.[13]?.content?.items?.[0]
 const title = base?.contentElements?.[0]?.content?.bodytext
 const content = base?.contentElements?.[1]?.content?.reviewBlock
-console.log(content)
+
 const options = {
   replace: (domNode)=>{
    

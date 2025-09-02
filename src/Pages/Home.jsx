@@ -14,6 +14,7 @@ import FluidAndResponsive from '../components/HomePage/FluidAndResponsive/FluidA
 import PreMadeLayout from '../components/HomePage/PreMadeLayout/PreMadeLayout'
 import MoreFeaturesCard from '../components/HomePage/MoreFeaturesCard/MoreFeaturesCard'
 import TestimonialSlider from '../components/HomePage/TestimonailSlider/TestimonialSlider'
+import NeedHelp from '../components/HomePage/NeedHelp/NeedHelp'
 
 
 const Home = () => {
@@ -31,6 +32,7 @@ const Home = () => {
         <PreMadeLayout/>
         <MoreFeaturesCard/>
         <TestimonialSlider/>
+        <NeedHelp/>
     </Layout>
   )
 }
