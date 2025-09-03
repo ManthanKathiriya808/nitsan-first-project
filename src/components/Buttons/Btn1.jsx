@@ -2,7 +2,7 @@ import React from 'react'
 
 const Btn1 = ({text}) => {
   return (
-     <button className="relative  px-8 text-lg py-3 text-lg font-medium text-white hover:text-[var(--primaryClr)] bg-[var(--primaryClr)] overflow-hidden group">
+     <button className="relative  my-[10px] px-[32px] py-[14px] text-[16px] font-medium text-white hover:text-[var(--primaryClr)] bg-[var(--primaryClr)] hover:overflow-hidden group">
   <span className="relative z-10">
     {text}
     </span>

@@ -15,6 +15,8 @@ import PreMadeLayout from '../components/HomePage/PreMadeLayout/PreMadeLayout'
 import MoreFeaturesCard from '../components/HomePage/MoreFeaturesCard/MoreFeaturesCard'
 import TestimonialSlider from '../components/HomePage/TestimonailSlider/TestimonialSlider'
 import NeedHelp from '../components/HomePage/NeedHelp/NeedHelp'
+import AccordianSection from '../components/HomePage/AccordianSection/AccordianSection'
+import BuildStunning from '../components/HomePage/BuildStunning/BuildStunning'
 
 
 const Home = () => {
@@ -33,6 +35,8 @@ const Home = () => {
         <MoreFeaturesCard/>
         <TestimonialSlider/>
         <NeedHelp/>
+        <AccordianSection/>
+        <BuildStunning/>
     </Layout>
   )
 }

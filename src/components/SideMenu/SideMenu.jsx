@@ -13,7 +13,7 @@ const SideMenu = () => {
         }
   return (
     // top-1/2 left-0 -translate-y-2/2
-    <div className='fixed z-999  tracking-wide top-1/2 left-0  -translate-y-1/2 '>
+    <div className='fixed z-999  tracking-wide top-1/2 left-0   -translate-y-1/2 '>
             <div className="main flex items-center flex-row-reverse">
                                 <div className='flex pb-19 flex-col '>
                            <button onClick={()=> setToggle(!toggle)} className='  rounded-r-sm  mb-[2px] bg-[#002348] text-white  py-3  px-3 '>
@@ -25,7 +25,6 @@ const SideMenu = () => {
                 </div>
 
 
-    {/* side */}
         <div >
             {toggle && (
                 <div className="div  bg-[#002348] ">

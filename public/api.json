@@ -4854,9 +4854,7 @@
             "overlaytext": true
           }
         }
-      },
-
-      
+      },   
       {
         "id": 953,
         "type": "ns_base_container",
@@ -5266,15 +5264,7 @@
             "background_option": "gray"
           }
         }
-      },
-
-
-
-
-
-
-
-      
+      },  
       {
         "id": 762,
         "type": "ns_base_container",

@@ -13,7 +13,7 @@ const NeedHelp = () => {
 const base = data?.content?.colPos0?.[14]?.content?.items?.[0]
 const title = base?.contentElements?.[0]?.content?.bodytext
 const content = base?.contentElements?.[1]?.content?.items
-console.log(base)
+
 
 const options ={
     replace: (domNode)=>{
