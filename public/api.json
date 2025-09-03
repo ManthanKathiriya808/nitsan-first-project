@@ -21404,11 +21404,6 @@
           "default_value": "0",
           "isInCurrentTemplate": false
         },
-
-
-
-
-
         "mobile_number": {
           "cat": "ns_basetheme",
           "subcat_name": "420",
@@ -21423,14 +21418,7 @@
           "value": "910278256818123",
           "default_value": "",
           "isInCurrentTemplate": false
-        },
-
-
-
-
-
-
-        
+        },        
         "email": {
           "cat": "ns_basetheme",
           "subcat_name": "420",

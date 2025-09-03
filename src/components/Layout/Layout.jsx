@@ -4,6 +4,7 @@ import Footer from '../Footer/Footer'
 import SideMenu from '../SideMenu/SideMenu'
 import  { ThemeContext } from '../../ThemeContext/ThemeContextProvider'
 import Navbars from '../Navbar/Navbars'
+import ScrollToTopButton from '../ScrollToTopBtn/ScrollToTopBtn'
 
 
 const Layout = ({children}) => {
@@ -20,6 +21,7 @@ const Layout = ({children}) => {
         {children}
         
     </div>
+    <ScrollToTopButton/>
     <Footer/>
     </div>
    </>

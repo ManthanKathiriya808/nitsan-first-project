@@ -12,18 +12,23 @@ import { IoTimeOutline } from "react-icons/io5";
 
 const Navbars = () => {
   const { data: navData } = useQuery(createQueryOptions());
+  const {lang,setLang} = useContext(ThemeContext)
   const [toggleSearch, setToggleSearch] = useState(false);
   const [toggleLang, setToggleLang] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState({});
     const {showLang,showSearch,navTheme,theme} = useContext(ThemeContext)
   const [isScrolled, setIsScrolled] = useState(false);
+
   const toggleMobileDropdown = (key) => {
     setMobileDropdownOpen((prev) => ({
       ...prev,
       [key]: !prev[key],
     }));
   };
+
+
+ 
 
   const navbarContact = navData?.page?.constants?.ns_basetheme
 
@@ -236,20 +241,8 @@ const Navbars = () => {
         { showLang && (
                 <div>
               {!toggleLang ? (
-                <button
-                  onClick={() => setToggleLang(!toggleLang)}
-                  className="flex items-center px-4 py-2 text-xl text-black hover:bg-gray-50"
-                  style={{ padding: "32px 0px 32px 14px" }}
-                >
-                  <img
-                    src="https://t3-reva.vercel.app/_next/static/media/US.89d51ae2.png"
-                    className="w-[19px] h-[19px]"
-                    alt="EN"
-                  />
-                </button>
-              ) : (
-                <div>
-                  <button
+     <div className="div">
+             { lang == "EN" ?  <button
                     onClick={() => setToggleLang(!toggleLang)}
                     className="flex items-center px-4 py-2 text-xl text-black hover:bg-gray-50"
                     style={{ padding: "32px 0px 32px 14px" }}
@@ -259,17 +252,52 @@ const Navbars = () => {
                       className="w-[19px] h-[19px]"
                       alt="EN"
                     />
-                  </button>
+                  </button> :        <button
+                    onClick={() => setToggleLang(!toggleLang)}
+                    className="flex items-center px-4 py-2 text-xl text-black hover:bg-gray-50"
+                    style={{ padding: "32px 0px 32px 14px" }}
+                  >
+                    <img
+                      src="https://t3-reva.vercel.app/_next/static/media/DE.e6358f84.png"
+                      className="w-[19px] h-[19px]"
+                      alt="DE"
+                    />
+                  </button> }
+     </div>
+              ) : (
+                <div>
+                  { lang == "EN" ?  <button
+                    onClick={() => setToggleLang(!toggleLang)}
+                    className="flex items-center px-4 py-2 text-xl text-black hover:bg-gray-50"
+                    style={{ padding: "32px 0px 32px 14px" }}
+                  >
+                    <img
+                      src="https://t3-reva.vercel.app/_next/static/media/US.89d51ae2.png"
+                      className="w-[19px] h-[19px]"
+                      alt="EN"
+                    />
+                  </button> :        <button
+                    onClick={() => setToggleLang(!toggleLang)}
+                    className="flex items-center px-4 py-2 text-xl text-black hover:bg-gray-50"
+                    style={{ padding: "32px 0px 32px 14px" }}
+                  >
+                    <img
+                      src="https://t3-reva.vercel.app/_next/static/media/DE.e6358f84.png"
+                      className="w-[19px] h-[19px]"
+                      alt="DE"
+                    />
+                  </button> }
+                 
                   <div className="absolute top-[100%] bg-white border-t border-[#e7e7e7] right-20">
                     <div className="flex flex-col gap-1 py-2">
-                      <button className="flex items-center px-4 py-2 text-xl text-black hover:bg-gray-50">
+                      <button className="flex items-center px-4 py-2 text-xl text-black hover:bg-gray-50" onClick={()=>setLang("EN")}>
                         <img
                           src="https://t3-reva.vercel.app/_next/static/media/US.89d51ae2.png"
                           className="w-[19px] h-[19px]"
                           alt="EN"
                         />
                       </button>
-                      <button className="flex items-center px-4 py-2 text-xl text-black hover:bg-gray-50">
+                      <button className="flex items-center px-4 py-2 text-xl text-black hover:bg-gray-50" onClick={()=>setLang("DE")}>
                         <img
                           src="https://t3-reva.vercel.app/_next/static/media/DE.e6358f84.png"
                           className="w-[19px] h-[19px]"

@@ -1,19 +1,28 @@
 import { div } from 'motion/react-client'
 import React, { useContext, useState } from 'react'
 import { ThemeContext } from '../../ThemeContext/ThemeContextProvider'
+import { useQuery } from '@tanstack/react-query'
+import createQueryOptions, { createGermanQueryOptions } from '../../queryOptions/createQueryOptions'
 
 const SideMenu = () => {
-
+    const {data:enData} = useQuery(createQueryOptions())
+    const {data:deData} = useQuery(createGermanQueryOptions())
+    
     const [toggle,setToggle] = useState(false)
-    const {navTheme,setNavTheme,showLang,showSearch,setShowSearch,setShowLang,changeTheme,theme,darkMode,setDarkMode,stripe,setStripe,resetSettings,saveSettings,footerTheme,setFooterTheme} = useContext(ThemeContext)
+    const {navTheme,setNavTheme,showLang,showSearch,lang,setShowSearch,setShowLang,changeTheme,theme,darkMode,setDarkMode,stripe,setStripe,resetSettings,saveSettings,footerTheme,setFooterTheme} = useContext(ThemeContext)
     
         const handleForm = (e)=>{
             e.preventDefault()
             saveSettings()
         }
+
+        const base = enData?.page?.constants?.ns_style
+
+        console.log(base)
   return (
     // top-1/2 left-0 -translate-y-2/2
     <div className='fixed z-999  tracking-wide top-1/2 left-0   -translate-y-1/2 '>
+        
             <div className="main flex items-center flex-row-reverse">
                                 <div className='flex pb-19 flex-col '>
                            <button onClick={()=> setToggle(!toggle)} className='  rounded-r-sm  mb-[2px] bg-[#002348] text-white  py-3  px-3 '>
