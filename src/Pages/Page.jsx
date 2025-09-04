@@ -12,9 +12,7 @@ const Page = ({ navData }) => {
 
   const { data, isLoading, error } = useQuery(createQueryOptions(path));
 
-
-  if (isLoading) return <p className="p-10">Loading...</p>;
-  if (error) return <p className="p-10 text-red-500">Error loading page.</p>;
+console.log(data)
 
   return (
     <Layout>

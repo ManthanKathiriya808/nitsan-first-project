@@ -23,7 +23,7 @@ function App() {
     } else {
       timer = setTimeout(() => {
         setShowLoader(false);
-      }, 0);
+      }, 3000);
     }
 
   }, [isPending]);
