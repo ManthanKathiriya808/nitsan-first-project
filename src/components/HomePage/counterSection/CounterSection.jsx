@@ -20,7 +20,7 @@ const CounterSection = () => {
   return (
     <div className='  py-[96px] md:px-4 overflow-hidden   flex items-center justify-center  bg-[var(--grayClr)]/30'>
         <div className="  grid grid-cols-1 lg:ms-5 lg:grid-cols-2  py-[30px]  h-full ">
-              <div className="contents  justify-center   flex flex-col lg:py-[40px] px-[12px] lg:mt-[24px] lg:ms-[203.164px] " >
+              <div className="contents  justify-center   flex flex-col lg:py-[40px] px-[12px] lg:mt-[24px] lg:ms-[203.164px] " data-aos="fade-up">
                 <div className="heading ">
                     <h1 className='leading-8 mb-[16px]'>
                       <GradientText className="" text= {stripHtml(header).replace(/&nbsp;/g  ," ").split("Each shortcode")[0]} />
@@ -64,7 +64,7 @@ const CounterSection = () => {
              </div>
 
               </div>
-              <div className="image   px-2 lg:px-0" style={{margin:"24px 0px 0px "}}>
+              <div className="image   px-2 lg:px-0" style={{margin:"24px 0px 0px "}} data-aos="fade-up">
                 <img src={base2} style={{width:"100%",height:"auto"}} alt=""  />
               </div>
         </div>

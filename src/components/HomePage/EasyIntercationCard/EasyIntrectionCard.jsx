@@ -13,7 +13,7 @@ const cards = base1?.contentElements[1]?.content?.items
   return (
       <div className="div  overflow-hidden">
       <div className='  max-w-7xl mx-auto'>
-          <div className="title   text-center" style={{padding:"96px 0px 32px"}}>
+          <div className="title   text-center" style={{padding:"96px 0px 32px"}} data-aos="fade-up">
             <div className="heading flex justify-center flex-col text-center">
                     <h1 className='leading-8'>
                       <GradientText className="" text= {stripHtml(header).replace(/&nbsp;/g  ," ").split("This template comes")[0]} />
@@ -25,7 +25,7 @@ const cards = base1?.contentElements[1]?.content?.items
           
         </div>
         <div style={{padding:"48px 0px 96px"}}>
-       <div className="div grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3">
+       <div className="div grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3" data-aos="fade-up">
                 {
         cards?.map((ele,index)=>(
             <div className="div px-[12px] mt-[24px] " key={index}>

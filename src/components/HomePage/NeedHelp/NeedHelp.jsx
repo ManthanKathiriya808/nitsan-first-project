@@ -46,12 +46,12 @@ const options ={
   return (
     <div className='bg-[var(--grayClr)]/30 '>
         <div className="div px-[12px] lg:mx-[55px]  ">
-            <div className="title pt-[96px]  pb-[48px] text-center">
+            <div className="title pt-[96px]  pb-[48px] text-center" data-aos="fade-up">
                 {title && parse(title,options)}
             </div>
             <div className="content pb-[96px]">
 
-<div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3">
+<div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3" data-aos="fade-up">
 
 
                     {

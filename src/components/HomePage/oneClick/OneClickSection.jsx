@@ -15,7 +15,7 @@ const content = base1?.contentElements[1]?.content?.processBlock
   return (
     <div className="div overflow-hidden pt-[96px]">
         <div className="title relative  text-center">
-            <div className="heading pb-[16px]">
+            <div className="heading pb-[16px]" data-aos="fade-up">
                     <h1 className=''>
                       <GradientText className="" text= {stripHtml(header).replace(/&nbsp;/g  ," ").split("Set up you")[0]} />
                     </h1>
@@ -23,7 +23,7 @@ const content = base1?.contentElements[1]?.content?.processBlock
                         {stripHtml(header).replace(/&nbsp;/g  ," ").split("demo install")[1]}
                     </p>
             </div>
-            <div className="content  mt-8 lg:mt-0 flex flex-col gap-4 lg:gap-0 lg:flex-row justify-evenly  ">
+            <div className="content  mt-8 lg:mt-0 flex flex-col gap-4 lg:gap-0 lg:flex-row justify-evenly  " data-aos="fade-up">
               
 
                 {
@@ -45,7 +45,7 @@ const content = base1?.contentElements[1]?.content?.processBlock
             </div>
            
 
-              <div className="div hidden lg:flex">
+              <div className="div hidden lg:flex" >
                   <div className="div   oneClick1"></div>
                 <div className="div   oneClick2"></div>
               </div>

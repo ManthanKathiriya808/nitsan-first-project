@@ -7,7 +7,8 @@ import Home from './Pages/Home'
 import {HashLoader, PacmanLoader} from "react-spinners"
 import { useEffect, useState } from 'react'
 import Page from './Pages/Page'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 function App() {
  
   const {data,isPending,isError,error} = useQuery(createQueryOptions())
@@ -27,6 +28,12 @@ function App() {
 
   }, [isPending]);
 
+     useEffect(() => {
+        AOS.init({
+            duration: 1000,
+       
+        });
+    }, []);
   if (showLoader) {
     return (
       <div className="min-h-screen w-full flex justify-center items-center">
@@ -34,6 +41,7 @@ function App() {
       </div>
     );
   }
+
   return (
     <>
  

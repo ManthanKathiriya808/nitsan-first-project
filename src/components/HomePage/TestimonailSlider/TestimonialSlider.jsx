@@ -44,13 +44,13 @@ const options = {
 
   return (
     <div className="bg-[var(--secondryClr)] ">
-    <div className="title relative pt-[96px] pb-[16px] text-white text-center">
+    <div className="title relative pt-[96px] pb-[16px] text-white text-center" data-aos="fade-up">
         
       {title && parse(title,options)}
     </div>
 
-      <div className="relative pt-[48px] px-3 pb-[96px] mx-auto">
-        <div className="absolute lg:-top-15  right-[40%]  top-[80%] lg:right-20 flex gap-5 z-10">
+      <div className="relative pt-[48px] px-3 pb-[96px] mx-auto" >
+        <div className="absolute lg:-top-15  right-[40%]  top-[80%] lg:right-20 flex gap-5 z-10" data-aos="fade-up">
           <button className="custom-prev bg-white p-6 rounded-full shadow-md hover:bg-gray-100">
         <FaArrowLeft className="font-light "/>
           </button>
@@ -60,7 +60,7 @@ const options = {
         </div>
 
 <div className="pb-[90px]">
-  <div className="div ">
+  <div className="div  " data-aos="fade-up">
 
           <Swiper
           modules={[Navigation]}

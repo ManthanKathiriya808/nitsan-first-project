@@ -21,7 +21,7 @@ const FluidAndResponsive = () => {
   return (
     <div className='   py-[50px]  overflow-hidden lg:py-[96px] flex items-center justify-center  bg-[var(--grayClr)]/30'>
         <div className='  grid grid-cols-1 max-w-7xl lg:grid-cols-2     '>
-              <div className="contents   mt-[24px] justify-center px-3 lg:px-0  flex flex-col ">
+              <div className="contents   mt-[24px] justify-center px-3 lg:px-0  flex flex-col " data-aos="fade-up">
                 <div className="heading pb-[32px]">
                     <h1 className='leading-8 mb-[8px]'>
                       <GradientText className="" text= {stripHtml(header).replace(/&nbsp;/g  ," ").split("No matter what")[0]} />
@@ -30,7 +30,7 @@ const FluidAndResponsive = () => {
                         {stripHtml(header).replace(/&nbsp;/g  ," ").split("all device types")[1]}
                     </p>
                 </div>
-             <div className=' flex   flex-col md:flex-row justify-evenly px-[12px]'>
+             <div className=' flex   flex-col md:flex-row justify-evenly px-[12px]' >
        {
                         counte1?.items?.map((item)=>(
                        
@@ -63,7 +63,7 @@ const FluidAndResponsive = () => {
              </div>
 
               </div>
-              <div className="image left-25 items-center gap-5 lg:gap-0 overflow-hidden flex flex-col px-3 lg:px-0  lg:ms-[20px] lg:relative ">
+              <div className="image left-25 items-center gap-5 lg:gap-0 overflow-hidden flex flex-col px-3 lg:px-0  lg:ms-[20px] lg:relative " data-aos="fade-up">
                 <img src={base2} style={{width:"502px",height:"312px"}} className='lg:absolute lg:left-0 lg:bottom-50 ' alt=""  />
                 <img src={base3} style={{width:"223px",height:"425px"}} className='lg:absolute lg:left-0'  alt=""  />
               </div>

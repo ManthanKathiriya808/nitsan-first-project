@@ -48,12 +48,12 @@ const options ={
   return (
     <div className='bg-[var(--grayClr)]/30 '>
         <div className="div px-[12px] lg:mx-[40px]  ">
-            <div className="title pt-[95px]  pb-[48px] text-center">
+            <div className="title pt-[95px]  pb-[48px] text-center" data-aos="fade-up">
                 {title && parse(title,options)}
             </div>
             <div className="content ">
            
-                <div className="box1 items-stretch  place-items-center grid grid-cols-1  lg:grid-cols-3">
+                <div className="box1 items-stretch  place-items-center grid grid-cols-1  lg:grid-cols-3" data-aos="fade-up">
                         {
                             box1?.map((ele,index)=>(
                                 <div className="div px-[12px] mt-[24px]" key={index}>
@@ -81,7 +81,7 @@ const options ={
                             ))
                         }
                 </div>
-                <div className="box1 place-items-center grid grid-cols-1 pt-[12px] items-stretch  lg:grid-cols-3">
+                <div className="box1 place-items-center grid grid-cols-1 pt-[12px] items-stretch  lg:grid-cols-3" data-aos="fade-up">
                         {
                             box2?.map((ele,index)=>(
                                 <div className="div   px-[12px] mt-[24px]" key={index}>
@@ -109,7 +109,7 @@ const options ={
                             ))
                         }
                 </div>
-                <div className="box1 items-stretch  place-items-center grid grid-cols-1 pt-[12px] pb-[64px] lg:grid-cols-3">
+                <div className="box1 items-stretch  place-items-center grid grid-cols-1 pt-[12px] pb-[64px] lg:grid-cols-3" data-aos="fade-up">
                         {
                             box3?.map((ele,index)=>(
                                 <div className="div px-[12px] mt-[24px]" key={index}>

@@ -16,7 +16,7 @@ const tabs = base1?.contentElements[1]?.content?.contentTabBlock
   return (
       <div className="div overflow-hidden bg-[var(--grayClr)]/30 py-[96px]">
       <div className=' mx-[39.5px] px-[12px] '>
-          <div className="title mb-[48px]  text-center">
+          <div className="title mb-[48px]  text-center" data-aos="fade-up">
             <div className="heading flex  justify-center flex-col text-center">
                     <h1 className='leading-8 mb-[8px]'>
                       <GradientText className="" text= {stripHtml(header).replace(/&nbsp;/g  ," ").split("We bring")[0]} />
@@ -27,7 +27,7 @@ const tabs = base1?.contentElements[1]?.content?.contentTabBlock
             </div>
           
         </div>
-        <div className='pt-[48px]'>
+        <div className='pt-[48px]' >
           <UnderLineTabs tabs={tabs}/>
 
 

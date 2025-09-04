@@ -54,10 +54,10 @@ const options ={
   return (
       <div className=' py-[96px]'>
            <div className="div px-[12px] lg:mx-[55px]  ">
-               <div className="title pb-[48px]   text-center">
+               <div className="title pb-[48px]   text-center" data-aos="fade-up">
                    {title && parse(title,options)}
                </div>
-           <div className="container pt-[32px]">
+           <div className="container pt-[32px]" data-aos="fade-up">
             <div className="grid  grid-cols-1 md:grid-cols-2">
                     {
                         content?.map((ele,index)=>(

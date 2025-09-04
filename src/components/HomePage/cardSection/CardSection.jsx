@@ -17,7 +17,7 @@ const cardData4 = data?.content?.colPos0[5]?.content?.items
 
   return (
     <div className='cardsection overflow-hidden grid grid-cols-1      '>
-            <div className="card1 pb-[32px]">
+            <div className="card1 pb-[32px]" data-aos="fade-up">
                     <div className="div grid grid-cols-1  md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 ">
 
             {
@@ -33,7 +33,7 @@ const cardData4 = data?.content?.colPos0[5]?.content?.items
         </div>
             </div>
            
-            <div className="card1 pb-[32px]">
+            <div className="card1 pb-[32px]" data-aos="fade-up">
                     <div className="div grid grid-cols-1  md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 ">
 
             {
@@ -49,7 +49,7 @@ const cardData4 = data?.content?.colPos0[5]?.content?.items
         </div>
             </div>
            
-            <div className="card1 pb-[32px]">
+            <div className="card1 pb-[32px]" data-aos="fade-up">
                     <div className="div grid grid-cols-1  md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 ">
 
             {
@@ -65,7 +65,7 @@ const cardData4 = data?.content?.colPos0[5]?.content?.items
         </div>
             </div>
            
-            <div className="card1 pb-[32px]">
+            <div className="card1 pb-[32px]" data-aos="fade-up">
                     <div className="div grid grid-cols-1  md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 ">
 
             {

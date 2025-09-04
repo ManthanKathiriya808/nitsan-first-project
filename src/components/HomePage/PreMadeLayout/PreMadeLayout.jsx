@@ -53,7 +53,7 @@ const options = {
   return (
 <div className="div overflow-hidden ">
       <div className='  max-w-7xl mx-auto'>
-          <div className="title pt-[96px] pb-[64px]  ">
+          <div className="title pt-[96px] pb-[64px]  " data-aos="fade-up">
             <div className="heading   flex justify-center flex-col text-center">
                     <h1 className='leading-8 mx-auto max-w-[700px]'>
                       <GradientText className="" text={stripHtml(header).replace(/&nbsp;/g  ," ").split(".")[0]} />
@@ -64,7 +64,7 @@ const options = {
             </div>
           
         </div>
-        <div className='pt-[16px] pb-[96px]'>
+        <div className='pt-[16px] pb-[96px]' data-aos="fade-up">
        <div className="div grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                 {
         cards?.map((ele,index)=>(
