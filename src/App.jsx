@@ -6,6 +6,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home'
 import {HashLoader, PacmanLoader} from "react-spinners"
 import { useEffect, useState } from 'react'
+import Page from './Pages/Page'
+
 function App() {
  
   const {data,isPending,isError,error} = useQuery(createQueryOptions())
@@ -41,6 +43,7 @@ function App() {
    <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home/>} />
+      <Route path="/*" element={<Page/>} />
         </Routes>
       </BrowserRouter>
 

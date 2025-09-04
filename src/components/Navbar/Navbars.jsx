@@ -9,6 +9,7 @@ import { FaFacebookF, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { MdOutlineLocalPhone } from "react-icons/md";
 import { CiMail } from "react-icons/ci";
 import { IoTimeOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const Navbars = () => {
   const { data: navData } = useQuery(createQueryOptions());
@@ -99,7 +100,7 @@ const Navbars = () => {
           style={{ height: "90px" }}
         >
           {/* Logo */}
-          <a href="/">
+          <Link to="/">
             <img
               loading="lazy"
         
@@ -107,21 +108,21 @@ const Navbars = () => {
               alt="Logo"
               className="w-[100%]"
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center">
             {navData?.page?.mainNavigation?.map((item, index) => (
               <div key={index} className="relative group">
-                <a
-                  href={item.link}
+                <Link
+                   to={item.link || "/"}
                   className={`flex items-center px-4 py-2  transition-colors duration-200 rounded-md  font-light tracking-normal     ${["without-topbar", "default", "full-width", "full-width-without-topbar"].includes(navTheme) || isScrolled ? "text-[var(--textClr)] " : "text-white"}`}
                 
                   style={{ padding: "32px 14px" }}
                 >
                   {item.title}
                   {item.children && <IoIosArrowDown className="ml-2" />}
-                </a>
+                </Link>
 
                 {/* Mega Menu for Elements */}
                 {item.title === "Elements" &&
@@ -138,12 +139,12 @@ const Navbars = () => {
                               <ul className="space-y-2">
                                 {child?.children?.map((nestedChild, nestedIndex) => (
                                   <li key={nestedIndex}>
-                                    <a
-                                      href={nestedChild.link}
+                                    <Link
+                                      to={nestedChild.link || "/"}
                                       className="block un text-[var(--textClr)]"
                                     >
                                       {nestedChild.title}
-                                    </a>
+                                    </Link>
                                   </li>
                                 ))}
                               </ul>
@@ -169,25 +170,25 @@ const Navbars = () => {
                     >
                       {item?.children?.map((child, childIndex) => (
                         <div key={childIndex} className="relative  group/child">
-                          <a
-                            href={child.link}
+                          <Link
+                            to={child.link || "/"}
                             className="flex items-center justify-between px-4 py-[6px]  text-[var(--textClr)] "
                           >
                             <span className="un">{child.title}</span>
                             {child.children && child.children.length > 0 && (
                               <ChevronRight className="h-4 w-4 ml-2" />
                             )}
-                          </a>
+                          </Link>
                           {child.children && child.children.length > 0 && (
                             <div className="absolute left-full top-0 ml-1 w-64 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover/child:opacity-100 group-hover/child:visible transition-all duration-300 transform translate-x-2 group-hover/child:translate-x-0 py-2">
                               {child.children.map((nestedChild, nestedIndex) => (
-                                <a
+                                <Link
                                   key={nestedIndex}
-                                  href={nestedChild.link}
+                                  to={nestedChild.link || "/"}
                                   className="block px-4 py-2 text-[var(--textClr)] un"
                                 >
                                   {nestedChild.title}
-                                </a>
+                                </Link>
                               ))}
                             </div>
                           )}
@@ -405,13 +406,13 @@ const Navbars = () => {
                           mobileDropdownOpen[`${index}-${childIndex}`] && (
                             <div className="pl-4 mt-1 space-y-1">
                               {child.children.map((nestedChild, nestedIndex) => (
-                                <a
+                                <Link
                                   key={nestedIndex}
-                                  href={nestedChild.link}
+                                  to={nestedChild.link || "/"}
                                   className="block px-2 py-1 text-[var(--textClr)] hover:text-black"
                                 >
                                   {nestedChild.title}
-                                </a>
+                                </Link>
                               ))}
                             </div>
                           )}

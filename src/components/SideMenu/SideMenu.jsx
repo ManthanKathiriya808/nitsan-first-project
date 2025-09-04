@@ -5,7 +5,6 @@ import { useQuery } from '@tanstack/react-query'
 import createQueryOptions from '../../queryOptions/createQueryOptions'
 
 const SideMenu = () => {
-    const {data:enData} = useQuery(createQueryOptions())
     
     const [toggle,setToggle] = useState(false)
     const {navTheme,setNavTheme,showLang,showSearch,lang,setShowSearch,setShowLang,changeTheme,theme,darkMode,setDarkMode,stripe,setStripe,resetSettings,saveSettings,footerTheme,setFooterTheme} = useContext(ThemeContext)
@@ -15,9 +14,7 @@ const SideMenu = () => {
             saveSettings()
         }
 
-        const base = enData?.page?.constants?.ns_style
 
-        console.log(base)
   return (
     // top-1/2 left-0 -translate-y-2/2
     <div className='fixed z-999  tracking-wide top-1/2 left-0   -translate-y-1/2 '>
