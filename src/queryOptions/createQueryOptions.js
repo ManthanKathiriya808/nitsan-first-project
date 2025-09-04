@@ -7,10 +7,7 @@ const fetchApi = async ()=> {
   return await resp.json()
 } 
 
-const germanApi = async ()=>{
-  const resp = await fetch("https://t3-reva.t3planet.de/de")
-  return await resp.json()
-}
+
 
 export default function createQueryOptions(){
   return queryOptions({
@@ -19,11 +16,6 @@ export default function createQueryOptions(){
   })
 }
 
-export function createGermanQueryOptions(){
-  return queryOptions({
-    queryKey: ["german"],
-    queryFn: germanApi
-  })
-}
+
 
 

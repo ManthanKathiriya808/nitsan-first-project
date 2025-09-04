@@ -2,11 +2,10 @@ import { div } from 'motion/react-client'
 import React, { useContext, useState } from 'react'
 import { ThemeContext } from '../../ThemeContext/ThemeContextProvider'
 import { useQuery } from '@tanstack/react-query'
-import createQueryOptions, { createGermanQueryOptions } from '../../queryOptions/createQueryOptions'
+import createQueryOptions from '../../queryOptions/createQueryOptions'
 
 const SideMenu = () => {
     const {data:enData} = useQuery(createQueryOptions())
-    const {data:deData} = useQuery(createGermanQueryOptions())
     
     const [toggle,setToggle] = useState(false)
     const {navTheme,setNavTheme,showLang,showSearch,lang,setShowSearch,setShowLang,changeTheme,theme,darkMode,setDarkMode,stripe,setStripe,resetSettings,saveSettings,footerTheme,setFooterTheme} = useContext(ThemeContext)
