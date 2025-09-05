@@ -22,7 +22,8 @@ const {footerTheme} = useContext(ThemeContext)
 
 
   return (
-    <div className={` font-normal  overflow-hidden mx-auto   ${["medium","small"].includes(footerTheme) ? "max-w-7xl" : ""}`}>
+    <div className="div  ">
+      <div className={` font-normal  overflow-hidden mx-auto   ${["medium","small"].includes(footerTheme) ? "max-w-7xl" : ""}`}>
 
 
       <div className={`div text-start text-[18px]  border-b border-[var(--textClr)]/10 ${footerTheme === "small" ? "mb-4": "mb-[40px] lg:mb-[80px]"}`} style={   { padding: "20px 0 10px"}} >
@@ -121,6 +122,8 @@ const {footerTheme} = useContext(ThemeContext)
       </div>
   
     </div>
+    </div>
+    
   )
 }
 

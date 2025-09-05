@@ -17,17 +17,23 @@ const Navbars = () => {
   const [toggleSearch, setToggleSearch] = useState(false);
   const [toggleLang, setToggleLang] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [mobileDropdownOpen, setMobileDropdownOpen] = useState({});
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(null);
     const {showLang,showSearch,navTheme,theme} = useContext(ThemeContext)
   const [isScrolled, setIsScrolled] = useState(false);
+const [openParent, setOpenParent] = useState(null);
+const [openChild, setOpenChild] = useState(null);
 
-  const toggleMobileDropdown = (key) => {
-    setMobileDropdownOpen((prev) => ({
-      ...prev,
-      [key]: !prev[key],
-    }));
-  };
+const toggleMobileDropdown = (key) => {
+  setMobileDropdownOpen((prev) => (prev === key ? null : key));
+};
+const toggleParent = (index) => {
+  setOpenParent((prev) => (prev === index ? null : index));
+  setOpenChild(null); // close child when parent changes
+};
 
+const toggleChild = (key) => {
+  setOpenChild((prev) => (prev === key ? null : key));
+};
 
  
 
@@ -361,118 +367,66 @@ const Navbars = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-gray-200 max-h-[80vh] overflow-y-auto px-4 py-6 space-y-4 shadow-lg">
-            {navData?.page?.mainNavigation?.map((item, index) => (
-              <div key={index}>
+         {isMobileMenuOpen && (
+  <div className="lg:hidden bg-white border-t border-gray-200 max-h-[80vh] overflow-y-auto px-4 py-6 space-y-4 shadow-lg">
+    {navData?.page?.mainNavigation?.map((item, index) => (
+      <div key={index}>
+        {/* Parent button */}
+        <button
+          onClick={() => toggleParent(index)}
+          className="flex items-center justify-between w-full text-left px-2 py-2 text-[var(--textClr)] hover:text-black hover:bg-gray-50 rounded"
+        >
+          {item.title}
+          {item.children && (
+            <IoIosArrowDown
+              className={`ml-2 transform ${openParent === index ? "rotate-180" : ""}`}
+            />
+          )}
+        </button>
+
+        {/* Parent children */}
+        {item.children && openParent === index && (
+          <div className="pl-4 mt-2 space-y-2">
+            {item.children.map((child, childIndex) => (
+              <div key={childIndex}>
+                {/* Child button */}
                 <button
-                  onClick={() => toggleMobileDropdown(index)}
-                  className="flex items-center justify-between w-full text-left px-2 py-2 text-[var(--textClr)] hover:text-black hover:bg-gray-50 rounded"
+                  onClick={() => toggleChild(`${index}-${childIndex}`)}
+                  className="flex items-center justify-between w-full text-left px-2 py-1 text-[var(--textClr)] hover:text-black"
                 >
-                  {item.title}
-                  {item.children && (
+                  {child.title}
+                  {child.children && (
                     <IoIosArrowDown
                       className={`ml-2 transform ${
-                        mobileDropdownOpen[index] ? "rotate-180" : ""
+                        openChild === `${index}-${childIndex}` ? "rotate-180" : ""
                       }`}
                     />
                   )}
                 </button>
 
-                {item.children && mobileDropdownOpen[index] && (
-                  <div className="pl-4 mt-2 space-y-2">
-                    {item.children.map((child, childIndex) => (
-                      <div key={childIndex}>
-                        <button
-                          onClick={() =>
-                            toggleMobileDropdown(`${index}-${childIndex}`)
-                          }
-                          className="flex items-center justify-between w-full text-left px-2 py-1 text-[var(--textClr)] hover:text-black"
-                        >
-                          {child.title}
-                          {child.children && (
-                            <IoIosArrowDown
-                              className={`ml-2 transform ${
-                                mobileDropdownOpen[`${index}-${childIndex}`]
-                                  ? "rotate-180"
-                                  : ""
-                              }`}
-                            />
-                          )}
-                        </button>
-
-                        {child.children &&
-                          mobileDropdownOpen[`${index}-${childIndex}`] && (
-                            <div className="pl-4 mt-1 space-y-1">
-                              {child.children.map((nestedChild, nestedIndex) => (
-                                <Link
-                                  key={nestedIndex}
-                                  to={nestedChild.link || "/"}
-                                  className="block px-2 py-1 text-[var(--textClr)] hover:text-black"
-                                >
-                                  {nestedChild.title}
-                                </Link>
-                              ))}
-                            </div>
-                          )}
-                      </div>
+                {/* Nested children */}
+                {child.children && openChild === `${index}-${childIndex}` && (
+                  <div className="pl-4 mt-1 space-y-1">
+                    {child.children.map((nestedChild, nestedIndex) => (
+                      <Link
+                        key={nestedIndex}
+                        to={nestedChild.link || "/"}
+                        className="block px-2 py-1 text-[var(--textClr)] hover:text-black"
+                      >
+                        {nestedChild.title}
+                      </Link>
                     ))}
                   </div>
                 )}
               </div>
             ))}
-
-              { showLang && (
-                <div>
-              {!toggleLang ? (
-                <button
-                  onClick={() => setToggleLang(!toggleLang)}
-                  className="flex items-center px-4  text-xl text-black hover:bg-gray-50"
-                >
-                  <img
-                    src="https://t3-reva.vercel.app/_next/static/media/US.89d51ae2.png"
-                    className="w-[19px] h-[19px]"
-                    alt="EN"
-                  />
-                </button>
-              ) : (
-                <div>
-                  <button
-                    onClick={() => setToggleLang(!toggleLang)}
-                    className="flex items-center px-4 text-xl text-black hover:bg-gray-50"
-                    style={{ padding: "32px 0px 32px 14px" }}
-                  >
-                    <img
-                      src="https://t3-reva.vercel.app/_next/static/media/US.89d51ae2.png"
-                      className="w-[19px] h-[19px]"
-                      alt="EN"
-                    />
-                  </button>
-                  <div className="absolute top-[100%] bg-white border-t border-[#e7e7e7] ">
-                    <div className="flex flex-col gap-1 py-2">
-                      <button className="flex items-center px-4 py-2 text-xl text-black hover:bg-gray-50">
-                        <img
-                          src="https://t3-reva.vercel.app/_next/static/media/US.89d51ae2.png"
-                          className="w-[19px] h-[19px]"
-                          alt="EN"
-                        />
-                      </button>
-                      <button className="flex items-center px-4 py-2 text-xl text-black hover:bg-gray-50">
-                        <img
-                          src="https://t3-reva.vercel.app/_next/static/media/DE.e6358f84.png"
-                          className="w-[19px] h-[19px]"
-                          alt="DE"
-                        />
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-        )}
           </div>
         )}
+      </div>
+    ))}
+  </div>
+)}
+
       </div>
     </div>
 
