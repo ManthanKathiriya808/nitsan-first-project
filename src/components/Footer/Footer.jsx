@@ -36,14 +36,14 @@ const {footerTheme} = useContext(ThemeContext)
         </div>
         <div className="icons gap-3 flex">
            
-            <a href="">
+            <a target='#' href="https://x.com/">
                 <FaXTwitter className="font-normal me-4 text-lg"/>
             </a>
           
-          <a href="">
+          <a target='#' href="https://facebook.com/">
             <FaFacebookF className="font-normal me-4 text-lg"/>
           </a>
-        <a href="">
+        <a target='#' href="https://linkedin.com/">
             <FaLinkedinIn className="font-normal me-4 text-lg" />
 
         </a>
@@ -105,12 +105,13 @@ const {footerTheme} = useContext(ThemeContext)
   <span className="absolute bottom-0 left-0 w-full h-0 bg-white border text-[var(--primaryClr)] border-[var(--primaryClr)] transition-all duration-500 ease-in-out group-hover:h-full"></span>
 </button>
               </div>
-              <div className="lower flex mt-5 items-center  text-[15px] gap-1 mb-[15px]">
-                <input type="checkbox" className='rounded w-[14px] h-[14px] '/>
-                <p>
-                    {form?.renderables[0]?.renderables[1]?.label}
-                </p>
-              </div>
+           <div className="lower flex mt-5 items-center text-[15px] gap-1 mb-[15px]">
+  <label className="flex items-center gap-2 cursor-pointer">
+    <input type="checkbox" className="rounded w-[14px] h-[14px]" />
+    {form?.renderables[0]?.renderables[1]?.label}
+  </label>
+</div>
+
             </div>
           </div>
       </div>
