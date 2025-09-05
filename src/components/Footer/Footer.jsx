@@ -25,7 +25,7 @@ const {footerTheme} = useContext(ThemeContext)
     <div className={` font-normal  overflow-hidden mx-auto   ${["medium","small"].includes(footerTheme) ? "max-w-7xl" : ""}`}>
 
 
-      <div className={`div text-start text-[18px]  border-b border-[var(--textClr)]/10 ${footerTheme === "small" ? "mb-4": "mb-[40px] lg:mb-[80px]"}`} style={   { padding: "20px 0 10px"}} data-aos="fade-up">
+      <div className={`div text-start text-[18px]  border-b border-[var(--textClr)]/10 ${footerTheme === "small" ? "mb-4": "mb-[40px] lg:mb-[80px]"}`} style={   { padding: "20px 0 10px"}} >
           <div className="class lg:px-1  px-3  flex flex-col gap-6 lg:gap-0 lg:flex-row lg:items-center justify-between">
         <div className="links flex flex-col lg:flex-row  gap-[20px] text-[16px]" style={{    padding: "20px 0 10px"}}>
           { data?.page?.footerNavigation.map((ele,index)=>(
@@ -53,7 +53,7 @@ const {footerTheme} = useContext(ThemeContext)
       </div>
       </div>
 
-      <div className={`other gap-2 border-b border-[var(--textClr)]/10 font-normal transition duration-500  pb-[64px] grid grid-cols-1 lg:grid-cols-7 ${footerTheme === "small" ? "hidden":""}`} data-aos="fade-up">
+      <div className={`other gap-2 border-b border-[var(--textClr)]/10 font-normal transition duration-500  pb-[64px] grid grid-cols-1 lg:grid-cols-7 ${footerTheme === "small" ? "hidden":""}`} >
           <div className="div lg:col-span-2 footer-box">
               <div className="main mb-[12px]">
                 <img src={imgUrl}  alt="" />
@@ -115,7 +115,7 @@ const {footerTheme} = useContext(ThemeContext)
           </div>
       </div>
 
-      <div className='text-center pt-5 ' data-aos="fade-up">
+      <div className='text-center pt-5 ' >
         <p>{data?.page?.constants?.ns_basetheme?.copyright?.value}</p>
       </div>
   

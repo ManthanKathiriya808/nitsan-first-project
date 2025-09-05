@@ -23,7 +23,7 @@ const options = {
   replace : (domNode)=>{
       if(domNode.name === "h4"){
           return(
-                <h4 className='text-[24px] text-[var(--secondryClr)] mb-[8px]'>
+                <h4 className='text-[24px]  text-[var(--secondryClr)] mb-[8px]'>
             {domToReact(domNode.children,options)}
         </h4>
           )
@@ -58,7 +58,7 @@ const options = {
                     <h1 className='leading-8 mx-auto max-w-[700px]'>
                       <GradientText className="" text={stripHtml(header).replace(/&nbsp;/g  ," ").split(".")[0]} />
                     </h1>
-                    <p className='text-[18px] leading-7 my-[16px] pt-2 font-light  max-w-[500px] mx-auto '>
+                    <p className='text-[18px] leading-5 my-[16px] pt-2 font-light  max-w-[500px] mx-auto '>
                         {stripHtml(header).replace(/&nbsp;/g," ").split(".")[1]}
                     </p>
             </div>

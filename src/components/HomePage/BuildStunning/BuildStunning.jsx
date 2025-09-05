@@ -55,7 +55,7 @@ const options = {
     }
 }
   return (
-    <div className='bg-[var(--secondryClr)] text-center py-[64px] '>
+    <div className='bg-[var(--secondryClr)]  text-center py-[64px] '>
         <div className="title " data-aos="fade-up">
                 { title && parse(title,options) }
         </div>

@@ -50,7 +50,7 @@ const rortatingText = ["modern","stunning","timeless","unique"]
 /> */}
 
 
-  <a href="#" target="_blank" class="bg-gradient-to-r pb-2 from-[var(--primaryClr)]  bg-[length:100%_25px]  bg-no-repeat bg-bottom  " ><h1 className='text-7xl  tracking-normal  font-bold'>
+  <a href="#" target="_blank" className="bg-gradient-to-r pb-2 from-[var(--primaryClr)]  bg-[length:100%_25px]  bg-no-repeat bg-bottom  " ><h1 className='text-7xl  tracking-normal  font-bold'>
     {HeroSectionContentmiddleText && stripHtml(HeroSectionContentmiddleText?.bodytext).substring(0,14)}
 </h1></a>
 

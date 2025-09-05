@@ -31,12 +31,12 @@ const CounterSection = () => {
                 </div>
              <div className=' flex items-center lg:items-start  flex-col overflow-hidden md:flex-row text-start md:justify-evenly  pt-[40px]'>
        {
-                        counte1?.items?.map((item)=>(
+                        counte1?.items?.map((item,index)=>(
                        
                             
-                  <div className='  flex flex-col justify-center text-center w-100'>
-                       {   item?.contentElements.map((ele)=>(
-                            <div >
+                  <div className='  flex flex-col justify-center text-center w-100' key={index}>
+                       {   item?.contentElements.map((ele,i)=>(
+                            <div key={i}>
 
                         <div className="div1 ">
                          <h1 className='text-[72px]   font-bold text-[var(--secondryClr)] flex  justify-center '>

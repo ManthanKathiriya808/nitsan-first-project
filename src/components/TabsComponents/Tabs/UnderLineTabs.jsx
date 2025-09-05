@@ -19,7 +19,7 @@ const UnderLineTabs = ({tabs}) => {
         }
         if(domNode.name=== "h2"){
             return (
-              <h1 className='leading-8 '>
+              <h1 className='lg:leading-12 leading-11  '>
                       <GradientText1 className="" text={domToReact(domNode.children,options)} />
 
                  
@@ -69,8 +69,8 @@ const UnderLineTabs = ({tabs}) => {
 
                   <div className="div">
                    {  
-                      ele?.contentBlock?.map((e,index)=>(
-                            <div className="py-[32px] my-8  rounded-lg grid  grid-cols-1 lg:grid-cols-2   ">
+                      ele?.contentBlock?.map((e,i)=>(
+                            <div className="py-[32px] my-8  rounded-lg grid  grid-cols-1 lg:grid-cols-2   " key={i}>
             <div className="title  my-[89px] lg:px-[12px]" data-aos="fade-up">
               
     <h1 className='leading-8'>
