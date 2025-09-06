@@ -8,6 +8,12 @@ const fetchApi = async (slug = "")=> {
   return await resp.json()
 } 
 
+const Hotspots = async ()=>{
+  const resp = await fetch(`https://t3-reva.t3planet.de/elements/infographic-elements/hotspots`)
+  if(!resp.ok) throw Error("faild to fetch hotspots")
+  return await resp.json()
+}
+
 
 
 export default function createQueryOptions(slug= ""){
@@ -17,6 +23,14 @@ export default function createQueryOptions(slug= ""){
   })
 }
 
+
+export function createHotspotsQueryOptions(){
+  return queryOptions({
+    queryKey: ["hotspots"],
+    queryFn: Hotspots
+
+  })
+}
 
 
 

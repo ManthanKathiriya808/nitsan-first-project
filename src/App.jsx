@@ -4,29 +4,15 @@ import { useQuery } from '@tanstack/react-query'
 import createQueryOptions from './queryOptions/createQueryOptions'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home'
-import {HashLoader, PacmanLoader} from "react-spinners"
 import { useEffect, useState } from 'react'
 import Page from './Pages/Page'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Hotspots from './Pages/Hotspots'
 function App() {
  
-  const {data,isPending,isError,error} = useQuery(createQueryOptions())
-//  console.log(data?.page?.mainNavigation)
-   const [showLoader,setShowLoader] = useState(false)
+  const {data} = useQuery(createQueryOptions())
 
-  useEffect(() => {
-    let timer;
-
-    if (isPending) {
-      setShowLoader(true); 
-    } else {
-      timer = setTimeout(() => {
-        setShowLoader(false);
-      }, 1000);
-    }
-
-  }, [isPending]);
 
      useEffect(() => {
         AOS.init({
@@ -34,13 +20,7 @@ function App() {
        
         });
     }, []);
-  if (showLoader) {
-    return (
-      <div className="min-h-screen w-full flex justify-center items-center">
-        <PacmanLoader color="var(--secondryClr)" />
-      </div>
-    );
-  }
+
 
   return (
     <>
@@ -52,6 +32,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>} />
       <Route path="/*" element={<Page/>} />
+      <Route path='/elements/infographic-elements/hotspots' element={<Hotspots/>} />
         </Routes>
       </BrowserRouter>
 
