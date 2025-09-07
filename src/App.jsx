@@ -10,7 +10,7 @@ import {SyncLoader} from "react-spinners"
 const Home = lazy(()=> import("./Pages/Home"))
 const Hotspots = lazy(()=> import("./Pages/Hotspots"))
 const Page = lazy(()=> import("./Pages/Page"))
-
+const AppGallery = lazy(()=> import("./Pages/AppGallery"))
 function App() {
  
 
@@ -35,6 +35,7 @@ function App() {
           <Route path='/' element={<Home/>} />
       <Route path="/*" element={<Page/>} />
       <Route path='/elements/infographic-elements/hotspots' element={<Hotspots/>} />
+      <Route path='/elements/business-elements/app-gallery' element={<AppGallery/>} />
         </Routes>
    </Suspense>
   </BrowserRouter>

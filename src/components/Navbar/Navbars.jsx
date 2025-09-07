@@ -109,7 +109,7 @@ const toggleChild = (key) => {
           {/* Logo */}
           <Link to="/">
             <LazyLoadImage
-              effect="blur"
+              
         
               src="https://t3-reva.t3planet.com/fileadmin/t3-reva/Logo/T3_Reva_Final_Logo.svg"
               alt="Logo"
@@ -258,7 +258,7 @@ const toggleChild = (key) => {
                   >
                     <LazyLoadImage
                       src="https://t3-reva.vercel.app/_next/static/media/US.89d51ae2.png"
-                     effect="blur"
+                     
                       className="w-[19px] h-[19px]"
                       alt="EN"
                     />
@@ -271,7 +271,7 @@ const toggleChild = (key) => {
                       src="https://t3-reva.vercel.app/_next/static/media/DE.e6358f84.png"
                       className="w-[19px] h-[19px]"
                       alt="DE"
-                      effect="blur"
+                      
                     />
                   </button> }
      </div>
@@ -286,7 +286,7 @@ const toggleChild = (key) => {
                       src="https://t3-reva.vercel.app/_next/static/media/US.89d51ae2.png"
                       className="w-[19px] h-[19px]"
                       alt="EN"
-                      effect="blur"
+                      
                     />
                   </button> :        <button
                     onClick={() => setToggleLang(!toggleLang)}
@@ -297,7 +297,7 @@ const toggleChild = (key) => {
                       src="https://t3-reva.vercel.app/_next/static/media/DE.e6358f84.png"
                       className="w-[19px] h-[19px]"
                       alt="DE"
-                      effect="blur"
+                      
                     />
                   </button> }
                  
@@ -308,7 +308,7 @@ const toggleChild = (key) => {
                           src="https://t3-reva.vercel.app/_next/static/media/US.89d51ae2.png"
                           className="w-[19px] h-[19px]"
                           alt="EN"
-                          effect="blur"
+                          
                         />
                       </button>
                       <button className="flex items-center px-4 py-2 text-xl text-black hover:bg-gray-50" onClick={()=>setLang("DE")}>
@@ -316,7 +316,7 @@ const toggleChild = (key) => {
                           src="https://t3-reva.vercel.app/_next/static/media/DE.e6358f84.png"
                           className="w-[19px] h-[19px]"
                           alt="DE"
-                          effect="blur"
+                          
                         />
                       </button>
                     </div>

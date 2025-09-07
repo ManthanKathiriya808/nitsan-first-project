@@ -187,3 +187,57 @@ body.boxed {
     max-width: 222px;
     max-height: 8
 }
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.custom-pagination {
+  text-align: center;
+}
+
+.custom-pagination .swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  background: #bbb;
+  opacity: 1;
+  margin: 0 6px !important;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+  background: #007bff;
+  width: 18px;
+  height: 18px;
+}
+.swiper-first .swiper-slide {
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+.swiper-first .swiper-slide-active {
+  opacity: 1;
+}
+
+.swiper-second .swiper-slide {
+  opacity: 0.3; 
+  transition: opacity 0.3s ease;
+}
+.swiper-second .swiper-slide-prev,
+.swiper-second .swiper-slide-next {
+  opacity: 0.5; 
+}
+.swiper-second .swiper-slide-active {
+  opacity: 1; 
+}
