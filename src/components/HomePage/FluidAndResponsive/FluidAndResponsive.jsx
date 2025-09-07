@@ -4,6 +4,7 @@ import createQueryOptions from '../../../queryOptions/createQueryOptions'
 import { div } from 'motion/react-client'
 import { stripHtml } from '../../../utils/strngreducer'
 import GradientText from '../../GradientText/GradientText'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const FluidAndResponsive = () => {
 
@@ -44,7 +45,7 @@ const FluidAndResponsive = () => {
                              
 
 
-<img src= {ele.content?.icon[0]?.publicUrl} loading='lazy' className='mb-[20px] pb-[20px]' alt="" />
+<LazyLoadImage src= {ele.content?.icon[0]?.publicUrl} effect="blur" className='mb-[20px] pb-[20px]' alt="" />
                          
 
                             <h1 className='text-[24px] text-[var(--secondryClr)]  mb-[20px] font-bolder '>
@@ -64,8 +65,8 @@ const FluidAndResponsive = () => {
 
               </div>
               <div className="image left-25 items-center gap-5 lg:gap-0 overflow-hidden flex flex-col px-3 lg:px-0  lg:ms-[20px] lg:relative " data-aos="fade-up">
-                <img src={base2} style={{width:"502px",height:"312px"}} loading='lazy' className='lg:absolute lg:left-0 lg:bottom-50 ' alt=""  />
-                <img src={base3} style={{width:"223px",height:"425px"}} loading='lazy' className='lg:absolute lg:left-0'  alt=""  />
+                <LazyLoadImage src={base2} style={{width:"502px",height:"312px"}}  className='lg:absolute lg:left-0 lg:bottom-50 ' alt=""  />
+                <LazyLoadImage src={base3} style={{width:"223px",height:"425px"}}  className='lg:absolute lg:left-0'  alt=""  />
               </div>
         </div>
 

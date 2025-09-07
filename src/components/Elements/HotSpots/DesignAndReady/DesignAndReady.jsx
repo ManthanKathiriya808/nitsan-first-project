@@ -3,6 +3,7 @@ import React from 'react'
 import parse,{ domToReact } from 'html-react-parser'
 
 import Btn2 from '../../../Buttons/Btn2'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 const DesignAndReady = ({data}) => {
 
     const content = data?.content?.colPos0?.[1]?.content?.items?.[0]?.contentElements?.[0]?.content?.items?.[0]?.contentElements?.[0]?.content?.bodytext
@@ -44,7 +45,7 @@ const DesignAndReady = ({data}) => {
 
             </div>
             <div className="image relative px-[12px] mt-[24px]" data-aos="fade-up">
-                    <img src={image}    loading='lazy' className='w-[100%] h-auto ' alt="" />
+                    <LazyLoadImage src={image}    effect="blur" className='w-[100%] h-auto ' alt="" />
 
             {tooltip?.map((ele, index) => (
   <div

@@ -5,6 +5,9 @@ import GradientBtn from '../../Buttons/GradientBtn'
 import RotatingText from './RotatingText.jsx/RotatingText'
 import parse from 'html-react-parser'
 import { stripHtml } from '../../../utils/strngreducer'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 const HeroSection = () => {
     const {data} = useQuery(createQueryOptions())
 
@@ -67,7 +70,7 @@ const rortatingText = ["modern","stunning","timeless","unique"]
     </div>    
        </div>
             <div className="images  " data-aos="fade-up">
-                <img src={HeroImg?.publicUrl} loading='lazy' className='w-full h-auto' alt="" />
+                <LazyLoadImage src={HeroImg?.publicUrl} effect="blur" className='w-full h-auto' alt="" />
                 
             </div>
             

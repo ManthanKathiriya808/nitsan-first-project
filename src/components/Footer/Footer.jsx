@@ -7,6 +7,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { stripHtml } from '../../utils/strngreducer';
 import Btn1 from '../Buttons/Btn1';
 import { ThemeContext } from '../../ThemeContext/ThemeContextProvider';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Footer = () => {
 
@@ -57,7 +58,7 @@ const {footerTheme} = useContext(ThemeContext)
       <div className={`other gap-2 border-b border-[var(--textClr)]/10 font-normal transition duration-500  pb-[64px] grid grid-cols-1 lg:grid-cols-7 ${footerTheme === "small" ? "hidden":""}`} >
           <div className="div lg:col-span-2 footer-box">
               <div className="main mb-[12px]">
-                <img src={imgUrl} loading='lazy'  alt="" />
+                <LazyLoadImage src={imgUrl} effect="blur"  alt="" />
               </div>
               <div className="content  tracking-wider font-light text-[18px] mb-[16px]">
                 {stripHtml(content)}

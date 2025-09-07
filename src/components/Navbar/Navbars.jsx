@@ -10,6 +10,7 @@ import { MdOutlineLocalPhone } from "react-icons/md";
 import { CiMail } from "react-icons/ci";
 import { IoTimeOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Navbars = () => {
   const { data: navData } = useQuery(createQueryOptions());
@@ -107,8 +108,8 @@ const toggleChild = (key) => {
         >
           {/* Logo */}
           <Link to="/">
-            <img
-              loading='lazy'
+            <LazyLoadImage
+              effect="blur"
         
               src="https://t3-reva.t3planet.com/fileadmin/t3-reva/Logo/T3_Reva_Final_Logo.svg"
               alt="Logo"
@@ -255,9 +256,9 @@ const toggleChild = (key) => {
                     className="flex items-center px-4 py-2 text-xl text-black hover:bg-gray-50"
                     style={{ padding: "32px 0px 32px 14px" }}
                   >
-                    <img
+                    <LazyLoadImage
                       src="https://t3-reva.vercel.app/_next/static/media/US.89d51ae2.png"
-                     loading='lazy'
+                     effect="blur"
                       className="w-[19px] h-[19px]"
                       alt="EN"
                     />
@@ -266,11 +267,11 @@ const toggleChild = (key) => {
                     className="flex items-center px-4 py-2 text-xl text-black hover:bg-gray-50"
                     style={{ padding: "32px 0px 32px 14px" }}
                   >
-                    <img
+                    <LazyLoadImage
                       src="https://t3-reva.vercel.app/_next/static/media/DE.e6358f84.png"
                       className="w-[19px] h-[19px]"
                       alt="DE"
-                      loading='lazy'
+                      effect="blur"
                     />
                   </button> }
      </div>
@@ -281,41 +282,41 @@ const toggleChild = (key) => {
                     className="flex items-center px-4 py-2 text-xl text-black hover:bg-gray-50"
                     style={{ padding: "32px 0px 32px 14px" }}
                   >
-                    <img
+                    <LazyLoadImage
                       src="https://t3-reva.vercel.app/_next/static/media/US.89d51ae2.png"
                       className="w-[19px] h-[19px]"
                       alt="EN"
-                      loading='lazy'
+                      effect="blur"
                     />
                   </button> :        <button
                     onClick={() => setToggleLang(!toggleLang)}
                     className="flex items-center px-4 py-2 text-xl text-black hover:bg-gray-50"
                     style={{ padding: "32px 0px 32px 14px" }}
                   >
-                    <img
+                    <LazyLoadImage
                       src="https://t3-reva.vercel.app/_next/static/media/DE.e6358f84.png"
                       className="w-[19px] h-[19px]"
                       alt="DE"
-                      loading='lazy'
+                      effect="blur"
                     />
                   </button> }
                  
                   <div className="absolute top-[100%] bg-white border-t border-[#e7e7e7] right-20">
                     <div className="flex flex-col gap-1 py-2">
                       <button className="flex items-center px-4 py-2 text-xl text-black hover:bg-gray-50" onClick={()=>setLang("EN")}>
-                        <img
+                        <LazyLoadImage
                           src="https://t3-reva.vercel.app/_next/static/media/US.89d51ae2.png"
                           className="w-[19px] h-[19px]"
                           alt="EN"
-                          loading='lazy'
+                          effect="blur"
                         />
                       </button>
                       <button className="flex items-center px-4 py-2 text-xl text-black hover:bg-gray-50" onClick={()=>setLang("DE")}>
-                        <img
+                        <LazyLoadImage
                           src="https://t3-reva.vercel.app/_next/static/media/DE.e6358f84.png"
                           className="w-[19px] h-[19px]"
                           alt="DE"
-                          loading='lazy'
+                          effect="blur"
                         />
                       </button>
                     </div>

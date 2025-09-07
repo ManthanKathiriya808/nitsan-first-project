@@ -6,6 +6,7 @@ import domToReact from 'html-react-parser/lib/dom-to-react'
 import parse from 'html-react-parser'
 import { FaCheck } from "react-icons/fa6";
 import Gradientbtn1 from '../../Buttons/Gradientbtn1'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 const NeedHelp = () => {
 
     const {data} = useQuery(createQueryOptions())
@@ -60,7 +61,7 @@ const options ={
                                 <div className="one py-[48px] bg-white px-[40px]" >
                                         <div className="img">
                                             <div className="span w-[65px]  ">
-                                            <img src={ele?.contentElements[0]?.content?.icon[0].publicUrl} loading='lazy' alt="" className=' p-[18px] bg-[var(--grayClr)]/30 mb-[20px]' />
+                                            <LazyLoadImage src={ele?.contentElements[0]?.content?.icon[0].publicUrl} effect="blur" alt="" className=' p-[18px] bg-[var(--grayClr)]/30 mb-[20px]' />
                                             </div>
                                         </div>
                                         <div className="items">

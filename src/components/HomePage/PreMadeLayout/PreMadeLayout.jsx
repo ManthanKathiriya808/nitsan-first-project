@@ -8,6 +8,7 @@ import { h4 } from 'motion/react-client'
 import { domToReact } from 'html-react-parser'
 import { FaCheck } from 'react-icons/fa'
 import parse from "html-react-parser"
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 const PreMadeLayout = () => {
 
     const {data} = useQuery(createQueryOptions())
@@ -73,7 +74,7 @@ const options = {
                     ele?.contentElements?.map((e,i)=>(
                         <div className="div px-[12px] mt-[24px]   " key={i}>
                                 <div className="header flex flex-col border border-gray-200 ">
-                                    <img src={e?.content?.image[0]?.publicUrl} loading='lazy' style={{height:"350px",width:"390px"}} className=' mx-auto ' alt="" />
+                                    <LazyLoadImage src={e?.content?.image[0]?.publicUrl} effect="blur" style={{height:"350px",width:"390px"}} className=' mx-auto ' alt="" />
                                   <div className="content px-[60px] py-[40px] border-t border-gray-200 " >
 
                                       {e?.content?.featuredText && parse(e?.content?.featuredText,options) }

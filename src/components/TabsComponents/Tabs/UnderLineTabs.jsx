@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { domToReact } from "html-react-parser";
 import parse from "html-react-parser"
 import GradientText1 from "../../GradientText/GradientText1";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 
 const UnderLineTabs = ({tabs}) => {
@@ -80,7 +81,7 @@ const UnderLineTabs = ({tabs}) => {
                     
             </div>
             <div className="image   lg:my-[48px] lg:px-[12px]" data-aos="fade-up">
-              <img src={e?.contentImage[0]?.publicUrl} loading='lazy' style={{height:"100%"}}   alt="" />
+              <LazyLoadImage src={e?.contentImage[0]?.publicUrl} effect="blur" style={{height:"100%"}}   alt="" />
             </div>
           </div>
                       ))

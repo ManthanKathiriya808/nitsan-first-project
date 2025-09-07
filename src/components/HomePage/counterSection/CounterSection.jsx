@@ -5,6 +5,7 @@ import { div } from 'motion/react-client'
 import { stripHtml } from '../../../utils/strngreducer'
 import GradientText from '../../GradientText/GradientText'
 import CountUp from './Counter'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 const CounterSection = () => {
 
     const {data} = useQuery(createQueryOptions())
@@ -65,7 +66,7 @@ const CounterSection = () => {
 
               </div>
               <div className="image   px-2 lg:px-0" style={{margin:"24px 0px 0px "}} data-aos="fade-up">
-                <img src={base2} loading='lazy' style={{width:"100%",height:"auto"}} alt=""  />
+                <LazyLoadImage src={base2} effect="blur" style={{width:"100%",height:"auto"}} alt=""  />
               </div>
         </div>
 

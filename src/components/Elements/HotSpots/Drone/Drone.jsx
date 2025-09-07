@@ -4,6 +4,7 @@ import parse,{ domToReact } from 'html-react-parser'
 
 import Btn2 from '../../../Buttons/Btn2'
 import Btn3 from '../../../Buttons/Btn3'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 const Drone = ({data}) => {
 
     const content = data?.content?.colPos0?.[3]?.content?.items?.[0]?.contentElements?.[0]?.content?.items?.[0]?.contentElements?.[0]?.content?.bodytext
@@ -63,7 +64,7 @@ console.log(content)
 
             </div>
             <div className="image relative px-[12px] mt-[24px]" data-aos="fade-up">
-                    <img src={image} loading='lazy' className='w-[100%] h-auto' alt="" />
+                    <LazyLoadImage src={image} effect="blur" className='w-[100%] h-auto' alt="" />
 
             {tooltip?.map((ele, index) => (
   <div

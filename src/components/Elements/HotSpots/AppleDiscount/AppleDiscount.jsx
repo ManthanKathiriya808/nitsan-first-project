@@ -1,6 +1,7 @@
 
 import parse,{ domToReact } from 'html-react-parser'
 import Gradientbtn1 from '../../../Buttons/Gradientbtn1'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 
 const AppleDiscount = ({data}) => {
@@ -57,7 +58,7 @@ const AppleDiscount = ({data}) => {
 
 
             <div className="image relative  px-[12px] mt-[24px] " data-aos="fade-up">
-                <img src={image} loading='lazy' className='w-[100%] h-auto ' alt="" />
+                <LazyLoadImage src={image} effect="blur" className='w-[100%] h-auto ' alt="" />
 
 {tooltip?.map((ele, index) => (
   <div
