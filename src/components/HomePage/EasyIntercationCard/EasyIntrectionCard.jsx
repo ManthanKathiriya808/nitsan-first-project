@@ -33,7 +33,7 @@ const cards = base1?.contentElements[1]?.content?.items
                     ele?.contentElements?.map((e,i)=>(
                         <div className="div px-[35px] py-[32px]  border border-gray-200" key={i}>
                                 <div className="header flex flex-col ">
-                                    <img src={e?.content?.icon[0]?.publicUrl} style={{height:"56px",width:"56px"}} className='mb-10 ' alt="" />
+                                    <img src={e?.content?.icon[0]?.publicUrl} loading='lazy' style={{height:"56px",width:"56px"}} className='mb-10 ' alt="" />
                                     <h1 className='text-[24px] mb-[20px] text-[var(--secondryClr)]'>{e?.content?.header}</h1>
                                   <div className="content">
                                         <p className='text-[20px] mb-[16px] font-normal'>{e?.content?.text}</p>

@@ -60,7 +60,7 @@ const options ={
                                 <div className="one py-[48px] bg-white px-[40px]" >
                                         <div className="img">
                                             <div className="span w-[65px]  ">
-                                            <img src={ele?.contentElements[0]?.content?.icon[0].publicUrl} alt="" className=' p-[18px] bg-[var(--grayClr)]/30 mb-[20px]' />
+                                            <img src={ele?.contentElements[0]?.content?.icon[0].publicUrl} loading='lazy' alt="" className=' p-[18px] bg-[var(--grayClr)]/30 mb-[20px]' />
                                             </div>
                                         </div>
                                         <div className="items">

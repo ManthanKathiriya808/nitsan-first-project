@@ -67,7 +67,7 @@ const rortatingText = ["modern","stunning","timeless","unique"]
     </div>    
        </div>
             <div className="images  " data-aos="fade-up">
-                <img src={HeroImg?.publicUrl} className='w-full h-auto' alt="" />
+                <img src={HeroImg?.publicUrl} loading='lazy' className='w-full h-auto' alt="" />
                 
             </div>
             

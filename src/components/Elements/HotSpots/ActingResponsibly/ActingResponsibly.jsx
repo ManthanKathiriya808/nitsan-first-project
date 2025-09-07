@@ -30,7 +30,7 @@ const options ={
              <div className="grid grid-cols-1   bg-[var(--grayClr)]/30  lg:grid-cols-2 ">
             <div className="images" data-aos="fade-up">
                           <div className="image relative    ">
-                    <img src={image} className='w-[100%] h-auto ' alt="" />
+                    <img src={image} loading='lazy' className='w-[100%] h-auto ' alt="" />
 
             {tooltip?.map((ele, index) => (
   <div
@@ -73,7 +73,7 @@ const options ={
                             <div className="div w-[100%] ">
                                <div className="div flex     py-[32px]  px-[40px]">
                                  <div className="img me-[25px] mb-[20px]  ">
-                                    <img src={e?.content?.icon?.[0]?.publicUrl} className='w-[110px]' alt="" />
+                                    <img src={e?.content?.icon?.[0]?.publicUrl} loading='lazy' className='w-[110px]' alt="" />
                                 </div>
                                 <div className="content">
                                         <h2 className=' mb-[20px] text-[var(--secondryClr)] text-[24px] leading-[34px] '>{e?.content?.iconTitle}</h2>

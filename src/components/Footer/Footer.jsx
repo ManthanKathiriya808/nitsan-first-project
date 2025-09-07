@@ -57,7 +57,7 @@ const {footerTheme} = useContext(ThemeContext)
       <div className={`other gap-2 border-b border-[var(--textClr)]/10 font-normal transition duration-500  pb-[64px] grid grid-cols-1 lg:grid-cols-7 ${footerTheme === "small" ? "hidden":""}`} >
           <div className="div lg:col-span-2 footer-box">
               <div className="main mb-[12px]">
-                <img src={imgUrl}  alt="" />
+                <img src={imgUrl} loading='lazy'  alt="" />
               </div>
               <div className="content  tracking-wider font-light text-[18px] mb-[16px]">
                 {stripHtml(content)}

@@ -63,7 +63,7 @@ console.log(content)
 
             </div>
             <div className="image relative px-[12px] mt-[24px]" data-aos="fade-up">
-                    <img src={image} className='w-[100%] h-auto' alt="" />
+                    <img src={image} loading='lazy' className='w-[100%] h-auto' alt="" />
 
             {tooltip?.map((ele, index) => (
   <div

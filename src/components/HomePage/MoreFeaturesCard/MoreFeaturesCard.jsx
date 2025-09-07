@@ -61,7 +61,7 @@ const options ={
                                         ele?.contentElements?.map((e,i)=>(
                                              <div className="div bg-white h-full px-[40px] pt-[32px] lg:items-start lg:gap-8 lg:flex" key={i}>
                              <div className="icon  ">
-                                    <img src={e?.content?.icon[0]?.publicUrl} className='   mr-[25px] mb-[20px] w-[32px] lg:w-[80px]  ' alt="" />
+                                    <img src={e?.content?.icon[0]?.publicUrl} loading='lazy' className='   mr-[25px] mb-[20px] w-[32px] lg:w-[80px]  ' alt="" />
                                 </div>
                                 <div className="content">
                                     <h2 className='text-[24px] text-[var(--secondryClr)] mb-[20px]'>
@@ -89,7 +89,7 @@ const options ={
                                         ele?.contentElements?.map((e,i)=>(
                                              <div className="div bg-white px-[40px] pt-[32px] h-full lg:items-start lg:gap-8 lg:flex" key={i}>
                             <div className="icon  ">
-                                    <img src={e?.content?.icon[0]?.publicUrl} className='   mr-[25px] mb-[20px] w-[32px] lg:w-[80px]  ' alt="" />
+                                    <img src={e?.content?.icon[0]?.publicUrl} loading='lazy' className='   mr-[25px] mb-[20px] w-[32px] lg:w-[80px]  ' alt="" />
                                 </div>
                                 <div className="content">
                                     <h2 className='text-[24px] text-[var(--secondryClr)] mb-[20px]'>
@@ -117,7 +117,7 @@ const options ={
                                         ele?.contentElements?.map((e,i)=>(
                                              <div className="div bg-white h-full px-[40px] pt-[32px] lg:items-start lg:gap-8 lg:flex" key={i}>
                                 <div className="icon  ">
-                                    <img src={e?.content?.icon[0]?.publicUrl} className='   mr-[25px] mb-[20px] w-[32px] lg:w-[80px]  ' alt="" />
+                                    <img src={e?.content?.icon[0]?.publicUrl} loading='lazy' className='   mr-[25px] mb-[20px] w-[32px] lg:w-[80px]  ' alt="" />
                                 </div>
                                 <div className="content">
                                     <h2 className='text-[24px] text-[var(--secondryClr)] mb-[20px]'>

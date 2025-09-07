@@ -9,7 +9,7 @@ const Cards = ({ele}) => {
              after:w-0 after:h-[4px] after:bg-[var(--primaryClr)]
              after:transition-all after:duration-300 hover:after:w-full bg-[var(--grayClr)]/30" style={{padding:"35px 35px 38px",margin:"0 0 30px"}}>
                   <a href={ele.contentElements[0]?.content?.contentLink?.href}>
-                    <img src={ele.contentElements[0]?.content?.icon[0]?.publicUrl} alt="" />
+                    <img src={ele.contentElements[0]?.content?.icon[0]?.publicUrl} loading='lazy' alt="" />
 
                     <p className='mt-3 text-3xl'>{ele.contentElements[0]?.content?.contentLink?.contentLinkText} </p>
                      </a>  

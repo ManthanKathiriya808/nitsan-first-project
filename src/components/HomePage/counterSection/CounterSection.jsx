@@ -65,7 +65,7 @@ const CounterSection = () => {
 
               </div>
               <div className="image   px-2 lg:px-0" style={{margin:"24px 0px 0px "}} data-aos="fade-up">
-                <img src={base2} style={{width:"100%",height:"auto"}} alt=""  />
+                <img src={base2} loading='lazy' style={{width:"100%",height:"auto"}} alt=""  />
               </div>
         </div>
 

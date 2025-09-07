@@ -80,7 +80,7 @@ const UnderLineTabs = ({tabs}) => {
                     
             </div>
             <div className="image   lg:my-[48px] lg:px-[12px]" data-aos="fade-up">
-              <img src={e?.contentImage[0]?.publicUrl} style={{height:"100%"}}   alt="" />
+              <img src={e?.contentImage[0]?.publicUrl} loading='lazy' style={{height:"100%"}}   alt="" />
             </div>
           </div>
                       ))

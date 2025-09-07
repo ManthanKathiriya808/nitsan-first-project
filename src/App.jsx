@@ -1,17 +1,18 @@
 
 import './App.css'
-import { useQuery } from '@tanstack/react-query'
-import createQueryOptions from './queryOptions/createQueryOptions'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './Pages/Home'
-import { useEffect, useState } from 'react'
-import Page from './Pages/Page'
+import { lazy, Suspense, useEffect, useState } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Hotspots from './Pages/Hotspots'
+import {SyncLoader} from "react-spinners"
+
+
+const Home = lazy(()=> import("./Pages/Home"))
+const Hotspots = lazy(()=> import("./Pages/Hotspots"))
+const Page = lazy(()=> import("./Pages/Page"))
+
 function App() {
  
-  const {data} = useQuery(createQueryOptions())
 
 
      useEffect(() => {
@@ -25,18 +26,20 @@ function App() {
   return (
     <>
  
-
- {
-  data &&    
+  
    <BrowserRouter>
+   <Suspense   fallback={<div className="h-screen w-[100%] flex justify-center items-center "><SyncLoader color="#00fff7" /></div>}>  
+
+
         <Routes>
           <Route path='/' element={<Home/>} />
       <Route path="/*" element={<Page/>} />
       <Route path='/elements/infographic-elements/hotspots' element={<Hotspots/>} />
         </Routes>
-      </BrowserRouter>
+   </Suspense>
+  </BrowserRouter>
 
- }
+ 
  
     </>
   )
