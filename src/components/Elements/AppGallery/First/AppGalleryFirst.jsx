@@ -14,34 +14,47 @@ const AppGalleryFirst = ({data}) => {
 console.log(images)
   return (
     <div className='py-[96px]'>
-        <div className="     relative text-center ">
-            <LazyLoadImage src={mockImg} effect="black-and-white" className=' max-w-[325px] opacity-100  relative z-10' />
+        <div className="     md:relative text-center ">
+            <LazyLoadImage src={mockImg} effect="black-and-white" className=' max-w-[325px] opacity-100 hidden md:relative md:flex z-10' />
       
-             <div className="absolute top-[0%] left-[0%] max-w-[100%] h-[100%] ">
-                       <Swiper
-        slidesPerView={4}
-        centeredSlides={true}
-        spaceBetween={100}
-         loop={true}    
-       initialSlide={2} 
+             <div className="md:absolute top-[0%] left-[0%] max-w-[100%] h-[100%] ">
+      <Swiper
+  centeredSlides={true}
+  loop={true}
+  initialSlide={2}
+  grabCursor={true}
+  pagination={{
+    clickable: true,
+  }}
+  modules={[Pagination]}
+  className="swiper-first"
+  breakpoints={{
+ 
+    640: {  
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    1024: { 
+ slidesPerView: 3,
+      spaceBetween: 30,
+    }, 
+    1222: { 
+ slidesPerView: 4,
+      spaceBetween: 100,
+    }
+  }}
+>
+  {images?.map((ele, index) => (
+    <SwiperSlide key={index}>
+      <LazyLoadImage
+        effect="black-and-white"
+        src={ele?.publicUrl}
+        className="rounded-[16px] max-w-full"
+      />
+    </SwiperSlide>
+  ))}
+</Swiper>
 
-        grabCursor={true}
-        pagination={{
-          clickable: true,
-          
-        }}
-        modules={[Pagination]}
-         className="swiper-first"
-      >
-        {
-            images?.map((ele,index)=>(
-
-    <SwiperSlide key={index}><LazyLoadImage effect="black-and-white" src={ele?.publicUrl}  /> </SwiperSlide>
-
-            ))
-        }
-
-      </Swiper>
              </div>
           </div>
         </div>
