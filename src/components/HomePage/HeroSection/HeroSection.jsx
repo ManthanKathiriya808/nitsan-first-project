@@ -30,13 +30,15 @@ const HeroSection = () => {
 const rortatingText = ["modern","stunning","timeless","unique"]
   return (
     <div className=' overflow-hidden  py-[96px] mb-7 px-3 md:px-0  bg-[var(--secondryClr)]'>
-        <div className="grid md:grid-cols-2 h-full max-w-7xl   pt-[96px] gap-6   mx-auto  ">
+
+        {
+            data &&     <div className="grid md:grid-cols-2 h-full max-w-7xl   pt-[96px] gap-6   mx-auto  ">
             <div className="content flex  flex-col gap-5 items-start justify-center text-white " data-aos="fade-up">
                 <div className="rotateTxt text-7xl  tracking-normal  font-bold">
                    
                    <div className="div mb-3  lg:flex">
                      {HeroSectionContent?.preText &&  (<span className='me-4'>{HeroSectionContent?.preText}</span>)} 
-                    <RotatingText texts={rortatingText}/>
+                   {HeroSectionContent && <RotatingText texts={rortatingText}/>}
                    </div>
                     {/* {HeroSectionContent?.rotatorBlock[0]?.rotatorText } */}
                        
@@ -75,6 +77,8 @@ const rortatingText = ["modern","stunning","timeless","unique"]
             </div>
             
         </div>
+        }
+    
     </div>
   )
 }

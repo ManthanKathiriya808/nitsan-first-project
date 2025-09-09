@@ -5,13 +5,14 @@ import { lazy, Suspense, useEffect, useState } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {SyncLoader} from "react-spinners"
-import ContactUs from './Pages/ContactUs';
+
 
 
 const Home = lazy(()=> import("./Pages/Home"))
 const Hotspots = lazy(()=> import("./Pages/Hotspots"))
 const Page = lazy(()=> import("./Pages/Page"))
 const AppGallery = lazy(()=> import("./Pages/AppGallery"))
+const ContactUs = lazy(()=> import("./Pages/ContactUs"))
 function App() {
  
 
