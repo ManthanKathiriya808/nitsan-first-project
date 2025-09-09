@@ -5,6 +5,8 @@ import parse,{ domToReact } from 'html-react-parser'
 import Btn2 from '../../../Buttons/Btn2'
 import Btn3 from '../../../Buttons/Btn3'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 const Drone = ({data}) => {
 
     const content = data?.content?.colPos0?.[3]?.content?.items?.[0]?.contentElements?.[0]?.content?.items?.[0]?.contentElements?.[0]?.content?.bodytext

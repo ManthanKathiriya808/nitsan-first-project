@@ -5,6 +5,7 @@ import { lazy, Suspense, useEffect, useState } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {SyncLoader} from "react-spinners"
+import ContactUs from './Pages/ContactUs';
 
 
 const Home = lazy(()=> import("./Pages/Home"))
@@ -36,6 +37,7 @@ function App() {
       <Route path="/*" element={<Page/>} />
       <Route path='/elements/infographic-elements/hotspots' element={<Hotspots/>} />
       <Route path='/elements/business-elements/app-gallery' element={<AppGallery/>} />
+      <Route path='/contact-us' element={<ContactUs/>} />
         </Routes>
    </Suspense>
   </BrowserRouter>

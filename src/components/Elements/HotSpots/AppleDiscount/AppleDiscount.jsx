@@ -3,6 +3,7 @@ import parse,{ domToReact } from 'html-react-parser'
 import Gradientbtn1 from '../../../Buttons/Gradientbtn1'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const AppleDiscount = ({data}) => {
 

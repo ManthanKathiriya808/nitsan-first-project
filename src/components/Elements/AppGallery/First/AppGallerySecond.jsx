@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 
 import { Pagination } from 'swiper/modules';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 const AppGallerySecond = ({data}) => {
 
 

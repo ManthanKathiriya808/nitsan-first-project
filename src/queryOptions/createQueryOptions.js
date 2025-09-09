@@ -20,6 +20,13 @@ const AppGallery = async ()=>{
 }
 
 
+const contactUs = async ()=>{
+  const resp = await fetch(`https://t3-reva.t3planet.de/contact-us`)
+  if(!resp.ok) throw Error("faild to fetch ContactUs")
+  return await resp.json()
+}
+
+
 
 export default function createQueryOptions(slug= ""){
   return queryOptions({
@@ -40,6 +47,13 @@ export function createAppGalleryQueryOptions(){
   return queryOptions({
     queryKey: ["appGallery"],
     queryFn: AppGallery
+
+  })
+}
+export function createContactUsQueryOptions(){
+  return queryOptions({
+    queryKey: ["contactUs"],
+    queryFn: contactUs
 
   })
 }

@@ -4,6 +4,7 @@ import parse,{ domToReact } from 'html-react-parser'
 
 import Btn2 from '../../../Buttons/Btn2'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css';
 const DesignAndReady = ({data}) => {
 
     const content = data?.content?.colPos0?.[1]?.content?.items?.[0]?.contentElements?.[0]?.content?.items?.[0]?.contentElements?.[0]?.content?.bodytext
