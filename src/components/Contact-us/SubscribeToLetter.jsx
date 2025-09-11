@@ -9,8 +9,7 @@ const SubscribeToLetter = ({data}) => {
   const title = base?.items?.[0]?.contentElements?.[0]?.content?.bodytext
   const form1 = base?.items?.[1]?.contentElements?.[0]?.content?.form_additional
   // const form2 = base?.items?.[1]?.contentElements?.[1]
-  console.log(form1)
-console.log()
+
 
   const options = {
      replace : (domNode) =>{

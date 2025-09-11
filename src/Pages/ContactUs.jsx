@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Layout from "../components/Layout/Layout"
 import { useQuery } from '@tanstack/react-query'
 import { createContactUsQueryOptions } from '../queryOptions/createQueryOptions'
@@ -7,8 +7,12 @@ import SubscribeToLetter from '../components/Contact-us/SubscribeToLetter'
 import FirstForm from '../components/Contact-us/FirstForm'
 import SecondForm from '../components/Contact-us/SecondForm'
 import ThirdForm from '../components/Contact-us/ThirdForm'
+import { LanguageContext } from '../ThemeContext/LanguageContextProvider'
+import { useParams } from 'react-router-dom'
 const ContactUs = () => {
-    const {data} = useQuery(createContactUsQueryOptions())
+   
+    const {lang} = useParams()
+    const {data} = useQuery(createContactUsQueryOptions(lang))
    
   return (
     <Layout>

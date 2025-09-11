@@ -33,13 +33,14 @@ function App() {
    <Suspense   fallback={<div className="h-screen w-[100%] flex justify-center items-center "><SyncLoader color="#00fff7" /></div>}>  
 
 
-        <Routes>
-          <Route path='/' element={<Home/>} />
-      <Route path="/*" element={<Page/>} />
-      <Route path='/elements/infographic-elements/hotspots' element={<Hotspots/>} />
-      <Route path='/elements/business-elements/app-gallery' element={<AppGallery/>} />
-      <Route path='/contact-us' element={<ContactUs/>} />
-        </Routes>
+       <Routes>
+  <Route path="/:lang?" element={<Home />} />
+  <Route path="/:lang?/elements/infographic-elements/hotspots" element={<Hotspots />} />
+  <Route path="/:lang?/elements/business-elements/app-gallery" element={<AppGallery />} />
+  <Route path="/:lang?/contact-us" element={<ContactUs />} />
+  <Route path="/:lang/*" element={<Page />} />  
+</Routes>
+
    </Suspense>
   </BrowserRouter>
 

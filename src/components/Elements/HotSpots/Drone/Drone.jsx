@@ -13,7 +13,6 @@ const Drone = ({data}) => {
     const image = data?.content?.colPos0?.[3]?.content?.items?.[0]?.contentElements?.[0]?.content?.items?.[1]?.contentElements?.[0]?.content?.image?.[0]?.publicUrl
     const tooltip = data?.content?.colPos0?.[3]?.content?.items?.[0]?.contentElements?.[0]?.content?.items?.[1]?.contentElements?.[0]?.content?.hotspotTooltip
 
-console.log(content)
         const options = {
         replace : (domNode)=>{
             if(domNode.name == "h2"){

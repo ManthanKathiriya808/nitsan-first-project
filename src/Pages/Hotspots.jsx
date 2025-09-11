@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Layout from '../components/Layout/Layout'
 import { useQuery } from '@tanstack/react-query'
 import { createHotspotsQueryOptions } from '../queryOptions/createQueryOptions'
@@ -7,10 +7,12 @@ import AppleDiscount from '../components/Elements/HotSpots/AppleDiscount/AppleDi
 import DesignAndReady from '../components/Elements/HotSpots/DesignAndReady/DesignAndReady'
 import ActingResponsibly from '../components/Elements/HotSpots/ActingResponsibly/ActingResponsibly'
 import Drone from '../components/Elements/HotSpots/Drone/Drone'
+import { useParams } from 'react-router-dom'
 
 const Hotspots = () => {
 
-    const {data} = useQuery(createHotspotsQueryOptions())
+    const {lang} = useParams()
+    const {data} = useQuery(createHotspotsQueryOptions(lang))
 
   return (
     <Layout>

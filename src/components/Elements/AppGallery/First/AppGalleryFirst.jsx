@@ -11,7 +11,7 @@ const AppGalleryFirst = ({data}) => {
     const base = data?.content?.colPos0?.[0]?.content?.items?.[0]?.contentElements?.[0]?.content
     const mockImg = base?.mockupImage?.[0]?.publicUrl
     const images = base?.image
-console.log(images)
+
   return (
     <div className='py-[96px]'>
         <div className="     md:relative text-center ">

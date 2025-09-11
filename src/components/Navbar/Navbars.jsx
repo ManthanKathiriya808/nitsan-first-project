@@ -11,10 +11,13 @@ import { CiMail } from "react-icons/ci";
 import { IoTimeOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { LanguageContext } from "../../ThemeContext/LanguageContextProvider";
 
 const Navbars = () => {
-  const { data: navData } = useQuery(createQueryOptions());
-  const {lang,setLang} = useContext(ThemeContext)
+
+  
+  const {lang,setLang} = useContext(LanguageContext)
+  const { data: navData } = useQuery(createQueryOptions("",lang));
   const [toggleSearch, setToggleSearch] = useState(false);
   const [toggleLang, setToggleLang] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -35,6 +38,7 @@ const toggleParent = (index) => {
 const toggleChild = (key) => {
   setOpenChild((prev) => (prev === key ? null : key));
 };
+
 
  
 
